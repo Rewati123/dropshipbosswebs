@@ -1,0 +1,482 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-glow: var(--primary-glow);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1rem;
+
+  /* base surface (ink) */
+  --background: oklch(0.17 0.028 250);
+  --foreground: oklch(0.97 0.006 250);
+  --card: oklch(0.213 0.03 252);
+  --card-foreground: oklch(0.97 0.006 250);
+  --popover: oklch(0.213 0.03 252);
+  --popover-foreground: oklch(0.97 0.006 250);
+  --secondary: oklch(0.27 0.032 252);
+  --secondary-foreground: oklch(0.97 0.006 250);
+  --muted: oklch(0.27 0.032 252);
+  --muted-foreground: oklch(0.74 0.022 252);
+  --destructive: oklch(0.62 0.21 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+
+  /* accent palette (by default: Golden Amber / Yellow) */
+  --primary: oklch(0.82 0.16 78);
+  --primary-glow: oklch(0.9 0.14 95);
+  --primary-foreground: oklch(0.17 0.03 250);
+  --accent: oklch(0.82 0.16 78);
+  --accent-foreground: oklch(0.17 0.03 250);
+  --ring: oklch(0.82 0.16 78);
+  --logo-filter: hue-rotate(0deg) saturate(1) brightness(1);
+}
+
+[data-theme="amber"] {
+  --primary: oklch(0.82 0.16 78);
+  --primary-glow: oklch(0.9 0.14 95);
+  --primary-foreground: oklch(0.17 0.03 250);
+  --accent: oklch(0.82 0.16 78);
+  --accent-foreground: oklch(0.17 0.03 250);
+  --ring: oklch(0.82 0.16 78);
+  --logo-filter: hue-rotate(0deg) saturate(1) brightness(1);
+}
+[data-theme="emerald"] {
+  --primary: oklch(0.75 0.17 162);
+  --primary-glow: oklch(0.86 0.15 175);
+  --primary-foreground: oklch(0.17 0.03 250);
+  --accent: oklch(0.75 0.17 162);
+  --accent-foreground: oklch(0.17 0.03 250);
+  --ring: oklch(0.75 0.17 162);
+  --logo-filter: hue-rotate(117deg) saturate(1.25) brightness(1.08);
+}
+[data-theme="rose"] {
+  --primary: oklch(0.72 0.19 12);
+  --primary-glow: oklch(0.82 0.15 35);
+  --accent: oklch(0.72 0.19 12);
+  --ring: oklch(0.72 0.19 12);
+  --primary-foreground: oklch(0.98 0.005 250);
+  --logo-filter: hue-rotate(327deg) saturate(1.3) brightness(1.05);
+}
+[data-theme="cyan"] {
+  --primary: oklch(0.78 0.14 210);
+  --primary-glow: oklch(0.88 0.11 195);
+  --accent: oklch(0.78 0.14 210);
+  --ring: oklch(0.78 0.14 210);
+  --logo-filter: hue-rotate(165deg) saturate(1.2) brightness(1.1);
+}
+[data-theme="violet"] {
+  --primary: oklch(0.7 0.18 300);
+  --primary-glow: oklch(0.8 0.15 320);
+  --accent: oklch(0.7 0.18 300);
+  --ring: oklch(0.7 0.18 300);
+  --primary-foreground: oklch(0.98 0.005 250);
+  --logo-filter: hue-rotate(255deg) saturate(1.3) brightness(1.1);
+}
+[data-theme="lime"] {
+  --primary: oklch(0.85 0.19 128);
+  --primary-glow: oklch(0.92 0.17 118);
+  --accent: oklch(0.85 0.19 128);
+  --ring: oklch(0.85 0.19 128);
+  --logo-filter: hue-rotate(83deg) saturate(1.35) brightness(1.1);
+}
+
+/* light surface variant */
+[data-surface="light"] {
+  --background: oklch(0.985 0.006 95);
+  --foreground: oklch(0.2 0.02 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.02 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.2 0.02 255);
+  --secondary: oklch(0.95 0.008 250);
+  --secondary-foreground: oklch(0.2 0.02 255);
+  --muted: oklch(0.95 0.008 250);
+  --muted-foreground: oklch(0.48 0.02 255);
+  --border: oklch(0.2 0.02 255 / 12%);
+  --input: oklch(0.2 0.02 255 / 16%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+  }
+  img, video {
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility gradient-text {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-primary),
+    var(--color-primary-glow)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+@utility surface-card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in oklab, var(--color-primary) 55%, transparent);
+    box-shadow: 0 20px 45px -20px
+      color-mix(in oklab, var(--color-primary) 60%, transparent);
+  }
+}
+
+@utility glow-ring {
+  box-shadow: 0 0 0 1px
+      color-mix(in oklab, var(--color-primary) 35%, transparent),
+    0 25px 60px -30px color-mix(in oklab, var(--color-primary) 80%, transparent);
+}
+
+@utility aurora {
+  position: relative;
+  isolation: isolate;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -20% -10% auto -10%;
+    height: 70%;
+    z-index: -1;
+    background: radial-gradient(
+        50% 60% at 20% 30%,
+        color-mix(in oklab, var(--color-primary) 30%, transparent),
+        transparent 70%
+      ),
+      radial-gradient(
+        45% 55% at 80% 20%,
+        color-mix(in oklab, var(--color-primary-glow) 25%, transparent),
+        transparent 70%
+      );
+    filter: blur(30px);
+    animation: aurora-drift 14s ease-in-out infinite alternate;
+  }
+}
+
+@utility marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes aurora-drift {
+  from {
+    transform: translate3d(-3%, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(4%, 3%, 0) scale(1.08);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@utility float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
+
+@utility rise-in {
+  animation: rise-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@utility input-base {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  background-color: color-mix(in oklab, var(--color-card) 85%, transparent);
+  padding: 0.7rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--color-foreground);
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  &::placeholder {
+    color: var(--color-muted-foreground);
+  }
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px
+      color-mix(in oklab, var(--color-primary) 25%, transparent);
+  }
+}
+
+.theme-logo {
+  filter: var(--logo-filter);
+  transition: filter 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.theme-logo-box {
+  border-color: color-mix(in oklab, var(--color-primary) 45%, transparent);
+  box-shadow: 0 0 16px color-mix(in oklab, var(--color-primary) 25%, transparent);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.theme-logo-box:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 24px color-mix(in oklab, var(--color-primary) 55%, transparent);
+}
+
+/* ========================================================
+   DROPSHIP BOSS - VIDEO REPLICA CSS LION ROAR & CIRCULAR GAUGE
+   ======================================================== */
+
+/* Lion Head Zoom & Roar Thrust matching the video action */
+@keyframes lion-video-stage-roar {
+  0% {
+    transform: scale(1.35) rotate(0deg) translate3d(0, 0, 0);
+  }
+  15% {
+    /* Head tilts back, jaw pulls back to gather air */
+    transform: scale(1.32) rotate(-10deg) translate3d(-15px, -10px, 0);
+  }
+  30% {
+    /* JOR SE AAGE JHATKA - EXPLOSIVE ROAR THRUST! */
+    transform: scale(1.52) rotate(15deg) translate3d(28px, 16px, 0);
+  }
+  38% {
+    /* Jaw chatter & violent acoustic vibration */
+    transform: scale(1.54) rotate(12deg) translate3d(22px, 12px, 0);
+  }
+  46% {
+    /* Second pulse of roar */
+    transform: scale(1.53) rotate(16deg) translate3d(30px, 18px, 0);
+  }
+  54% {
+    /* Tremor */
+    transform: scale(1.5) rotate(13deg) translate3d(24px, 14px, 0);
+  }
+  65% {
+    /* Sustained roar roar roar */
+    transform: scale(1.48) rotate(14deg) translate3d(26px, 15px, 0);
+  }
+  80% {
+    /* Turn slightly front & recoil */
+    transform: scale(1.38) rotate(2deg) translate3d(5px, 0, 0);
+  }
+  92% {
+    /* Second roaring nod */
+    transform: scale(1.42) rotate(8deg) translate3d(12px, 6px, 0);
+  }
+  100% {
+    transform: scale(1.35) rotate(0deg) translate3d(0, 0, 0);
+  }
+}
+
+/* Concentric acoustic rings exploding from the lion's mouth */
+@keyframes video-mouth-shockwave {
+  0% {
+    transform: scale(0.1) translate3d(0, 0, 0);
+    opacity: 0;
+    border-width: 6px;
+    box-shadow: 0 0 25px #f59e0b, inset 0 0 20px #fef08a;
+  }
+  18% {
+    opacity: 1;
+    border-width: 4.5px;
+    box-shadow: 0 0 45px #f59e0b, 0 0 80px rgba(245, 158, 11, 0.85);
+  }
+  100% {
+    transform: scale(3.8) translate3d(60px, 20px, 0);
+    opacity: 0;
+    border-width: 1px;
+    box-shadow: 0 0 100px rgba(245, 158, 11, 0);
+  }
+}
+
+/* Directional acoustic sound wave arches radiating to the right (like in the video) */
+@keyframes video-sonic-bracket {
+  0% {
+    opacity: 0;
+    transform: translateX(0) scaleY(0.4) scaleX(0.5);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(25px) scaleY(1) scaleX(1);
+    border-color: #fef08a;
+    box-shadow: 0 0 20px #f59e0b;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(120px) scaleY(2.2) scaleX(1.8);
+    border-color: #d97706;
+  }
+}
+
+/* Electric lightning filaments dancing on the lion's mane */
+@keyframes mane-electric-flicker {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 15px rgba(245, 158, 11, 0.4));
+  }
+  25% {
+    opacity: 0.85;
+    transform: scale(1.08) rotate(1deg);
+    filter: drop-shadow(0 0 35px #f59e0b) drop-shadow(0 0 50px #fef08a);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.02) rotate(-1deg);
+  }
+  75% {
+    opacity: 0.95;
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 40px #f59e0b) drop-shadow(0 0 60px #fde047);
+  }
+}
+
+/* Screen rumble camera shake during roar */
+@keyframes video-screen-tremor {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  20% { transform: translate3d(-3px, 2px, 0); }
+  35% { transform: translate3d(4px, -3px, 0); }
+  50% { transform: translate3d(-4px, -1px, 0); }
+  65% { transform: translate3d(3px, 3px, 0); }
+  80% { transform: translate3d(-2px, -2px, 0); }
+}
+
+/* Metallic gold light sheen sweep on DROPSHIP BOSS title */
+@keyframes gold-shine-sweep {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-video-roar {
+  animation: lion-video-stage-roar 2.2s cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+}
+
+.animate-video-mouth-blast-1 {
+  animation: video-mouth-shockwave 1.1s cubic-bezier(0.1, 0.85, 0.2, 1) infinite;
+}
+
+.animate-video-mouth-blast-2 {
+  animation: video-mouth-shockwave 1.1s cubic-bezier(0.1, 0.85, 0.2, 1) infinite 0.35s;
+}
+
+.animate-video-mouth-blast-3 {
+  animation: video-mouth-shockwave 1.1s cubic-bezier(0.1, 0.85, 0.2, 1) infinite 0.7s;
+}
+
+.animate-video-sonic-1 {
+  animation: video-sonic-bracket 0.85s ease-out infinite;
+}
+
+.animate-video-sonic-2 {
+  animation: video-sonic-bracket 0.85s ease-out infinite 0.28s;
+}
+
+.animate-video-sonic-3 {
+  animation: video-sonic-bracket 0.85s ease-out infinite 0.56s;
+}
+
+.animate-mane-electric {
+  animation: mane-electric-flicker 0.6s ease-in-out infinite;
+}
+
+.animate-screen-tremor {
+  animation: video-screen-tremor 0.15s ease-in-out infinite;
+}
+
+.animate-gold-shine {
+  background-size: 200% auto;
+  animation: gold-shine-sweep 2.5s linear infinite;
+}
+
+
