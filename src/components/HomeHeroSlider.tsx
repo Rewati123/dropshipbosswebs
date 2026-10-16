@@ -15,8 +15,7 @@ import {
   Megaphone,
   Package,
   Phone,
-  RefreshCw,
-  ShieldCheck,
+
   Sparkles,
   Store,
   TrendingUp,
@@ -533,11 +532,10 @@ export function HomeHeroSlider() {
                 <button
                   key={s.id}
                   onClick={() => setActiveSlide(idx)}
-                  className={`group flex items-center gap-2 rounded-full py-1.5 px-3 text-xs font-bold transition-all duration-300 cursor-pointer ${
-                    isActive
+                  className={`group flex items-center gap-2 rounded-full py-1.5 px-3 text-xs font-bold transition-all duration-300 cursor-pointer ${isActive
                       ? "bg-primary text-primary-foreground shadow-md shadow-primary/30"
                       : "bg-card border border-border/80 text-muted-foreground hover:border-primary hover:text-foreground"
-                  }`}
+                    }`}
                   aria-label={`Go to slide ${idx + 1}: ${s.headlineHighlight}`}
                 >
                   <span className="h-1.5 w-1.5 rounded-full bg-current" />
