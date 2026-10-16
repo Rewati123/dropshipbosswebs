@@ -6,17 +6,28 @@ import { steps } from "@/lib/site-data";
 export const Route = createFileRoute("/how-it-works")({
   head: () => ({
     meta: [
-      { title: "Kaise Kaam Karta Hai — Dropship Boss Dropshipping Process" },
+      {
+        title:
+          "How Dropshipping Works in India — Step-by-Step Process | Dropship Boss",
+      },
       {
         name: "description",
         content:
-          "Plan se lekar pehli sale tak ka poora process: store setup, product import, order dispatch aur scaling.",
+          "Discover how our turnkey dropshipping model takes you from store setup to your first customer sale in 7 days. Automated sourcing, catalog import, and express dispatch.",
       },
-      { property: "og:title", content: "Dropshipping Process — Dropship Boss" },
+      {
+        name: "keywords",
+        content:
+          "how dropshipping works india, dropshipping process, turnkey store setup, ecommerce fulfillment, winning products sourcing",
+      },
+      {
+        property: "og:title",
+        content: "How Dropshipping Works — Dropship Boss Automation Process",
+      },
       {
         property: "og:description",
         content:
-          "4 steps me store live: setup, catalog import, dispatch aur growth support.",
+          "Launch a zero-inventory dropshipping store in 4 simple steps: setup, catalog import, automated dispatch, and scaling support.",
       },
     ],
   }),
@@ -24,37 +35,36 @@ export const Route = createFileRoute("/how-it-works")({
 });
 
 const timeline = [
-  { day: "Day 1", text: "Consultation call aur plan finalisation" },
-  { day: "Day 2", text: "Seller account, GST aur documents guidance" },
-  { day: "Day 3", text: "Store design, branding aur policy pages" },
-  { day: "Day 4-5", text: "Catalog import + listing optimisation" },
-  { day: "Day 6", text: "Pricing, shipping slab aur payment setup" },
-  { day: "Day 7", text: "Store live, marketing playbook handover" },
+  { day: "Day 1", text: "1-on-1 Strategy Consultation & Business Roadmap Finalization" },
+  { day: "Day 2", text: "Seller Account Setup, Brand Approvals & GST Compliance Support" },
+  { day: "Day 3", text: "Turnkey Storefront Design, Branding & Policy Integration" },
+  { day: "Day 4-5", text: "Winning Catalog Import & SEO Listing Optimization" },
+  { day: "Day 6", text: "Profit Margins, Courier Shipping Slabs & Payment Gateway Setup" },
+  { day: "Day 7", text: "Store Goes Live & Growth Ad Playbook Handover" },
 ];
 
 const included = [
-  "Marketplace + D2C store setup",
-  "Winning product research sheet",
-  "Listing title, bullets aur SEO keywords",
-  "Supplier onboarding aur rate card",
-  "Order dispatch coordination",
-  "Return / RTO handling SOP",
-  "Ads starter playbook",
-  "Lifetime mentor support",
+  "Multi-Marketplace (Amazon/Meesho) & D2C Store Setup",
+  "Pre-Vetted Winning Product Research Sheet",
+  "SEO-Optimized Product Titles, Bullets & Keyword Tags",
+  "Direct Manufacturer Sourcing & B2B Wholesale Pricing",
+  "Automated Order Dispatch & Real-Time Tracking Integration",
+  "Return (RTO) Reduction Standard Operating Procedures",
+  "Proven Meta & Google Ads Scaling Playbook",
+  "Lifetime 1-on-1 E-Commerce Mentorship Access",
 ];
 
 export function HowItWorks() {
   return (
     <>
       <PageHero
-        eyebrow="Process"
+        eyebrow="Turnkey Methodology"
         title={
           <>
-            Idea se <span className="gradient-text">pehli sale</span> tak, 7 din
-            me
+            From Concept to <span className="gradient-text">First Sale</span> in 7 Days
           </>
         }
-        subtitle="Har step par hamari team saath hoti hai — koi guesswork nahi, sirf checklist follow karni hai."
+        subtitle="Our dedicated e-commerce team guides every milestone. No guesswork, no trial-and-error — just an execution roadmap designed for profitable scale."
       />
 
       <Section>
@@ -65,27 +75,35 @@ export function HowItWorks() {
                 {s.n}
               </span>
               <h2 className="mt-3 text-lg font-semibold">{s.title}</h2>
-              <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.text}</p>
             </div>
           ))}
         </div>
       </Section>
 
       <Section className="pt-0">
-        <SectionTitle eyebrow="Timeline" title="7 din ka launch roadmap" />
-        <ol className="mx-auto max-w-3xl border-l border-border pl-6">
+        <SectionTitle
+          eyebrow="Execution Timeline"
+          title="7-Day Turnkey Launch Roadmap"
+          text="A clear milestone schedule ensuring your store is fully optimized, stocked, and operational within one week."
+        />
+        <ol className="mx-auto max-w-3xl border-l border-border pl-6 space-y-6">
           {timeline.map((t) => (
-            <li key={t.day} className="relative pb-8 last:pb-0">
+            <li key={t.day} className="relative pb-2">
               <span className="absolute -left-[31px] top-1 h-3.5 w-3.5 rounded-full bg-primary ring-4 ring-primary/20" />
               <p className="text-sm font-semibold text-primary">{t.day}</p>
-              <p className="mt-1 text-muted-foreground">{t.text}</p>
+              <p className="mt-1 text-sm text-muted-foreground">{t.text}</p>
             </li>
           ))}
         </ol>
       </Section>
 
       <Section className="pt-0">
-        <SectionTitle eyebrow="Included" title="Package me kya kya milta hai" />
+        <SectionTitle
+          eyebrow="Deliverables"
+          title="Everything Included in Your Setup Package"
+          text="Comprehensive tools, vetted supplier catalogs, and ongoing mentorship to secure long-term seller profitability."
+        />
         <div className="grid gap-3 sm:grid-cols-2">
           {included.map((i) => (
             <div
@@ -93,16 +111,16 @@ export function HowItWorks() {
               className="surface-card flex items-center gap-3 px-5 py-4"
             >
               <CheckCircle2 className="h-5 w-5 shrink-0 text-primary" />
-              <span className="text-sm">{i}</span>
+              <span className="text-sm font-medium">{i}</span>
             </div>
           ))}
         </div>
         <div className="mt-10 text-center">
           <Link
             to="/pricing"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-transform duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-all duration-300 hover:scale-105 shadow-lg cursor-pointer"
           >
-            Pricing dekhein <ArrowRight className="h-4 w-4" />
+            Explore Pricing Plans <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </Section>

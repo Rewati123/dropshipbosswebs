@@ -7,7 +7,7 @@ import { BRAND } from "@/lib/site-data";
 const nav = [
   { to: "/", label: "Home" },
   { to: "/categories", label: "Categories" },
-  { to: "/how-it-works", label: "Kaise Kaam Karta Hai" },
+  { to: "/how-it-works", label: "How It Works" },
   { to: "/pricing", label: "Pricing" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },

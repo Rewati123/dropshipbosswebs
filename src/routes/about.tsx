@@ -6,17 +6,25 @@ import { stats, testimonials } from "@/lib/site-data";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Dropship Boss — Team, Mission aur Sellers" },
+      {
+        title:
+          "About Dropship Boss — Leading Dropshipping & E-Commerce Partner in India",
+      },
       {
         name: "description",
         content:
-          "Dropship Boss ki kahani: chhote shehron ke sellers ko zero-inventory online business shuru karne me madad karna.",
+          "Learn how Dropship Boss empowers 1,000+ Indian entrepreneurs to build profitable, automated dropshipping businesses with zero upfront inventory.",
       },
-      { property: "og:title", content: "About Dropship Boss" },
+      {
+        name: "keywords",
+        content:
+          "about dropship boss, dropshipping company india, ecommerce automation agency, dropshipping mentorship, online business setup india",
+      },
+      { property: "og:title", content: "About Dropship Boss — Turnkey Dropshipping Partner" },
       {
         property: "og:description",
         content:
-          "1,000+ stores launched. Mission: har beginner ke liye online selling simple banana.",
+          "Over 1,000+ online stores launched. Our mission is to make e-commerce entrepreneurship accessible, scalable, and risk-free for everyone in India.",
       },
     ],
   }),
@@ -26,18 +34,18 @@ export const Route = createFileRoute("/about")({
 const values = [
   {
     icon: Target,
-    title: "Practical over theory",
-    text: "Hum courses nahi bechte. Actual store, actual listing, actual order — sab hands-on.",
+    title: "Practical Execution Over Theory",
+    text: "We do not sell generic recorded courses. We build real custom stores, optimize active listings, and coordinate live order dispatches hands-on.",
   },
   {
     icon: HeartHandshake,
-    title: "Honest guidance",
-    text: "Agar koi category aapke budget me kaam nahi karegi, hum saaf mana kar dete hain.",
+    title: "Transparent & Objective Guidance",
+    text: "If a category or ad budget will not deliver viable profit margins, we provide candid advice and guide you toward profitable alternatives.",
   },
   {
     icon: Users,
-    title: "Community first",
-    text: "1,000+ sellers ka private group jahan roz product aur supplier insights share hote hain.",
+    title: "Seller Community First",
+    text: "Join our active network of 1,000+ Indian dropshippers sharing real-time winning product insights, supplier trends, and scaling strategies.",
   },
 ];
 
@@ -45,14 +53,14 @@ function About() {
   return (
     <>
       <PageHero
-        eyebrow="About us"
+        eyebrow="Our Mission & Story"
         title={
           <>
-            Hum chhote sellers ko{" "}
-            <span className="gradient-text">bada banate</span> hain
+            Empowering Entrepreneurs to{" "}
+            <span className="gradient-text">Scale Online</span>
           </>
         }
-        subtitle="2019 me ek chhote se Surat supplier network se shuruaat hui. Aaj 1,000+ sellers ke stores hamare system par chal rahe hain."
+        subtitle="Founded with a mission to eliminate traditional retail barriers in India. Today, over 1,000+ sellers manage profitable automated online businesses powered by our turnkey ecosystem."
       />
 
       <Section>
@@ -69,28 +77,21 @@ function About() {
       </Section>
 
       <Section className="pt-0">
-        <div className="grid gap-10 lg:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div>
             <SectionTitle
-              eyebrow="Our story"
-              title="Shuruaat ek simple problem se"
+              eyebrow="Our Story"
+              title="Solving the Core Challenges of Indian E-Commerce"
             />
-            <div className="space-y-4 text-muted-foreground">
+            <div className="space-y-4 text-muted-foreground leading-relaxed text-sm sm:text-base">
               <p>
-                Tier-2 aur tier-3 shehron me talent ki kami nahi hai — kami hai
-                sahi system ki. Log online business start karna chahte hain
-                lekin inventory, warehouse aur courier ka risk unhe rok deta
-                hai.
+                Across Tier-1, Tier-2, and Tier-3 cities in India, millions of aspiring entrepreneurs seek financial independence through e-commerce. However, traditional retail barriers — heavy upfront capital, warehouse leases, and complicated courier logistics — have historically kept them out.
               </p>
               <p>
-                Humne suppliers, logistics partners aur marketplace experts ko
-                ek platform par laakar ek aisa model banaya jisme seller ko
-                stock kharidna hi nahi padta. Order aata hai, supplier dispatch
-                karta hai, seller profit rakhta hai.
+                Dropship Boss bridged this divide by uniting verified Indian manufacturers, top courier logistics providers, and multi-channel marketplace infrastructure onto a single automated platform. Sellers operate without purchasing inventory upfront: when an order arrives, verified suppliers dispatch directly, and sellers retain their profit margins.
               </p>
               <p>
-                Aaj hamari team me 40+ log hain — catalog researchers, listing
-                specialists, supplier managers aur dedicated mentors.
+                Today, our multidisciplinary team of 40+ specialists includes catalog researchers, listing SEO specialists, supplier quality managers, and dedicated 1-on-1 growth mentors committed to your success.
               </p>
             </div>
           </div>
@@ -101,8 +102,8 @@ function About() {
                   <v.icon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="font-semibold">{v.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{v.text}</p>
+                  <h3 className="font-semibold text-base">{v.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{v.text}</p>
                 </div>
               </div>
             ))}
@@ -111,16 +112,20 @@ function About() {
       </Section>
 
       <Section className="pt-0">
-        <SectionTitle eyebrow="Sellers" title="Hamari community kya kehti hai" />
+        <SectionTitle
+          eyebrow="Seller Feedback"
+          title="What Our Dropshipping Community Says"
+          text="Hear from entrepreneurs who launched and scaled their online businesses with Dropship Boss."
+        />
         <div className="grid gap-5 sm:grid-cols-2">
           {testimonials.map((t) => (
-            <figure key={t.name} className="surface-card p-6">
-              <blockquote className="text-sm text-muted-foreground">
+            <figure key={t.name} className="surface-card p-6 flex flex-col justify-between">
+              <blockquote className="text-sm text-muted-foreground italic leading-relaxed">
                 “{t.text}”
               </blockquote>
-              <figcaption className="mt-4 text-sm font-semibold">
-                {t.name}
-                <span className="ml-2 text-xs font-normal text-muted-foreground">
+              <figcaption className="mt-4 text-sm font-semibold pt-3 border-t border-border/50 flex items-center justify-between">
+                <span>{t.name}</span>
+                <span className="text-xs font-normal text-muted-foreground">
                   {t.city}
                 </span>
               </figcaption>
@@ -130,9 +135,9 @@ function About() {
         <div className="mt-10 text-center">
           <Link
             to="/contact"
-            className="inline-flex rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-transform duration-300 hover:scale-105"
+            className="inline-flex rounded-full bg-primary px-7 py-3 font-semibold text-primary-foreground transition-transform duration-300 hover:scale-105 shadow-md cursor-pointer"
           >
-            Team se baat karein
+            Connect With Our Team
           </Link>
         </div>
       </Section>

@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, Phone, Play, Youtube } from "lucide-react";
-import { BRAND, categories } from "@/lib/site-data";
+import { Instagram, Mail, MapPin, MessageCircle, Phone, Play, Youtube } from "lucide-react";
+import { BRAND, categories, CONTACT_INFO } from "@/lib/site-data";
 import { replayIntro } from "@/lib/intro";
 
 export function Footer() {
@@ -26,8 +26,8 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            India ka beginner-friendly dropshipping aur reselling setup partner.
-            Store banao, products import karo, dispatch hum sambhalte hain.
+            India&apos;s leading zero-inventory dropshipping and e-commerce automation partner.
+            Turnkey store setup, winning product sourcing, and automated order fulfillment.
           </p>
           <div className="mt-4">
             <button
@@ -35,18 +35,36 @@ export function Footer() {
               className="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3.5 py-1.5 text-xs font-semibold text-amber-300 transition-all hover:border-amber-400 hover:bg-amber-500/20 cursor-pointer shadow-[0_0_12px_rgba(245,158,11,0.15)]"
             >
               <Play className="h-3 w-3 fill-amber-400 text-amber-400" />
-              <span>Replay Lion Intro</span>
+              <span>Replay Intro</span>
             </button>
           </div>
           <div className="mt-5 flex gap-3">
-            {[Instagram, Youtube, Mail].map((Icon, i) => (
-              <span
-                key={i}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
-              >
-                <Icon className="h-4 w-4" />
-              </span>
-            ))}
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
+            >
+              <Instagram className="h-4 w-4" />
+            </span>
+            <span
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
+            >
+              <Youtube className="h-4 w-4" />
+            </span>
+            <a
+              href={CONTACT_INFO.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp (+91 95826 17055)"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/10"
+            >
+              <MessageCircle className="h-4 w-4" />
+            </a>
+            <a
+              href={`mailto:${CONTACT_INFO.email}`}
+              aria-label="Email Dropship Boss Support"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
+            >
+              <Mail className="h-4 w-4" />
+            </a>
           </div>
         </div>
 
@@ -58,10 +76,10 @@ export function Footer() {
             {([
               ["/", "Home"],
               ["/categories", "Categories"],
-              ["/how-it-works", "Kaise kaam karta hai"],
+              ["/how-it-works", "How It Works"],
               ["/pricing", "Pricing"],
-              ["/about", "About us"],
-              ["/contact", "Contact"],
+              ["/about", "About Us"],
+              ["/contact", "Contact & Support"],
             ] as const).map(([to, label]) => (
               <li key={to}>
                 <Link
@@ -107,10 +125,33 @@ export function Footer() {
               </span>
             </li>
             <li className="flex items-center gap-2">
-              <Phone className="h-4 w-4 text-primary" /> +91 70551 46473
+              <Phone className="h-4 w-4 text-primary shrink-0" />
+              <a
+                href={`tel:${CONTACT_INFO.phone.replace(/\s+/g, "")}`}
+                className="hover:text-primary transition-colors"
+              >
+                {CONTACT_INFO.phone}
+              </a>
             </li>
             <li className="flex items-center gap-2">
-              <Mail className="h-4 w-4 text-primary" /> hello@dropshipboss.in
+              <MessageCircle className="h-4 w-4 text-emerald-400 shrink-0" />
+              <a
+                href={CONTACT_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-emerald-400 text-emerald-400/90 font-medium transition-colors"
+              >
+                WhatsApp: {CONTACT_INFO.phone}
+              </a>
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail className="h-4 w-4 text-primary shrink-0" />
+              <a
+                href={`mailto:${CONTACT_INFO.email}`}
+                className="hover:text-primary transition-colors"
+              >
+                {CONTACT_INFO.email}
+              </a>
             </li>
             <li>Mon–Sat, 10am – 7pm IST</li>
           </ul>
@@ -118,8 +159,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border px-4 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {BRAND}. All rights reserved. Ye ek
-        independent demo website hai.
+        © {new Date().getFullYear()} {BRAND}. All rights reserved.
       </div>
     </footer>
   );
