@@ -13,9 +13,21 @@ export const CONTACT_INFO = {
   phoneRaw: "919582617055",
   whatsappUrl:
     "https://wa.me/919582617055?text=Namaste%2C%20mujhe%20Dropship%20Boss%20ke%20bare%20me%20jaankari%20chahiye",
+  instagram: "https://www.instagram.com/dropshipboss.in/",
+  facebook: "https://www.facebook.com/dropshipboss.in",
+  youtube: "https://www.youtube.com/@dropshipboss",
   timings: "Mon–Sat, 10am – 7pm IST",
   address:
     "Ekta Enclave Block A, Baba Surdas Colony, Near Balaji Hospital, Tilpat, Faridabad, Haryana 121003",
+};
+
+export const SOCIAL_LINKS = {
+  instagram: "https://www.instagram.com/dropshipboss.in/",
+  facebook: "https://www.facebook.com/dropshipboss.in",
+  youtube: "https://www.youtube.com/@dropshipboss",
+  whatsapp:
+    "https://wa.me/919582617055?text=Namaste%2C%20mujhe%20Dropship%20Boss%20ke%20bare%20me%20jaankari%20chahiye",
+  email: "mailto:support@dropshipboss.in",
 };
 
 export const ADDRESS = {

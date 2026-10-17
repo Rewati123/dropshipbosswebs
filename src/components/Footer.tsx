@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, MessageCircle, Phone, Play, Youtube } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, MessageCircle, Phone, Play, Youtube } from "lucide-react";
 import { BRAND, categories, CONTACT_INFO } from "@/lib/site-data";
 import { replayIntro } from "@/lib/intro";
 
@@ -38,33 +38,64 @@ export function Footer() {
               <span>Replay Intro</span>
             </button>
           </div>
-          <div className="mt-5 flex gap-3">
-            <span
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
-            >
-              <Instagram className="h-4 w-4" />
-            </span>
-            <span
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
-            >
-              <Youtube className="h-4 w-4" />
-            </span>
-            <a
-              href={CONTACT_INFO.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Chat on WhatsApp (+91 95826 17055)"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-emerald-500 hover:text-emerald-400 hover:bg-emerald-500/10"
-            >
-              <MessageCircle className="h-4 w-4" />
-            </a>
-            <a
-              href={`mailto:${CONTACT_INFO.email}`}
-              aria-label="Email Dropship Boss Support"
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-border text-muted-foreground transition-colors duration-300 hover:border-primary hover:text-primary"
-            >
-              <Mail className="h-4 w-4" />
-            </a>
+          <div className="mt-6">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-muted-foreground">
+              Official Social Channels
+            </p>
+            <div className="mt-3 flex flex-wrap items-center gap-2.5">
+              <a
+                href={CONTACT_INFO.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Dropship Boss on Instagram (@dropshipboss.in)"
+                title="Instagram (@dropshipboss.in)"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/80 bg-secondary/40 text-muted-foreground transition-all duration-300 hover:scale-110 hover:border-pink-500/60 hover:text-pink-500 hover:bg-pink-500/10 hover:shadow-[0_0_16px_rgba(236,72,153,0.35)] active:scale-95"
+              >
+                <Instagram className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+
+              <a
+                href={CONTACT_INFO.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Connect with Dropship Boss on Facebook"
+                title="Facebook"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/80 bg-secondary/40 text-muted-foreground transition-all duration-300 hover:scale-110 hover:border-blue-500/60 hover:text-blue-500 hover:bg-blue-500/10 hover:shadow-[0_0_16px_rgba(59,130,246,0.35)] active:scale-95"
+              >
+                <Facebook className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+
+              <a
+                href={CONTACT_INFO.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Subscribe to Dropship Boss on YouTube"
+                title="YouTube"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/80 bg-secondary/40 text-muted-foreground transition-all duration-300 hover:scale-110 hover:border-red-500/60 hover:text-red-500 hover:bg-red-500/10 hover:shadow-[0_0_16px_rgba(239,68,68,0.35)] active:scale-95"
+              >
+                <Youtube className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+
+              <a
+                href={CONTACT_INFO.whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Dropship Boss on WhatsApp (+91 95826 17055)"
+                title="WhatsApp (+91 95826 17055)"
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/80 bg-secondary/40 text-muted-foreground transition-all duration-300 hover:scale-110 hover:border-emerald-500/60 hover:text-emerald-400 hover:bg-emerald-500/10 hover:shadow-[0_0_16px_rgba(16,185,129,0.35)] active:scale-95"
+              >
+                <MessageCircle className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+
+              <a
+                href={`mailto:${CONTACT_INFO.email}`}
+                aria-label="Email Dropship Boss Support"
+                title={`Email (${CONTACT_INFO.email})`}
+                className="group flex h-11 w-11 items-center justify-center rounded-xl border border-border/80 bg-secondary/40 text-muted-foreground transition-all duration-300 hover:scale-110 hover:border-primary/60 hover:text-primary hover:bg-primary/10 hover:shadow-[0_0_16px_rgba(245,158,11,0.35)] active:scale-95"
+              >
+                <Mail className="h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
+              </a>
+            </div>
           </div>
         </div>
 
