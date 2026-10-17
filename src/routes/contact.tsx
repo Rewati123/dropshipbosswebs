@@ -9,7 +9,7 @@ import {
   Send,
   MessageSquare,
   MessageCircle,
-  ExternalLink,
+
   Copy,
   Check,
   Sparkles,
