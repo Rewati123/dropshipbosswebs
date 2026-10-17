@@ -15,6 +15,7 @@ import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as ShippingDeliveryPolicyRouteImport } from './routes/shipping-delivery-policy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -46,6 +47,11 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ShippingDeliveryPolicyRoute = ShippingDeliveryPolicyRouteImport.update({
+  id: '/shipping-delivery-policy',
+  path: '/shipping-delivery-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -71,13 +79,27 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/about' | '/categories' | '/contact' | '/how-it-works' | '/pricing'
+    | '/'
+    | '/about'
+    | '/categories'
+    | '/contact'
+    | '/how-it-works'
+    | '/pricing'
+    | '/shipping-delivery-policy'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/categories' | '/contact' | '/how-it-works' | '/pricing'
+  to:
+    | '/'
+    | '/about'
+    | '/categories'
+    | '/contact'
+    | '/how-it-works'
+    | '/pricing'
+    | '/shipping-delivery-policy'
   id:
     | '__root__'
     | '/'
@@ -86,6 +108,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/how-it-works'
     | '/pricing'
+    | '/shipping-delivery-policy'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -95,6 +118,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PricingRoute: typeof PricingRoute
+  ShippingDeliveryPolicyRoute: typeof ShippingDeliveryPolicyRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -141,6 +165,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/shipping-delivery-policy': {
+      id: '/shipping-delivery-policy'
+      path: '/shipping-delivery-policy'
+      fullPath: '/shipping-delivery-policy'
+      preLoaderRoute: typeof ShippingDeliveryPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -151,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   HowItWorksRoute: HowItWorksRoute,
   PricingRoute: PricingRoute,
+  ShippingDeliveryPolicyRoute: ShippingDeliveryPolicyRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

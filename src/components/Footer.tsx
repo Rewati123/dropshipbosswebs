@@ -111,6 +111,7 @@ export function Footer() {
               ["/pricing", "Pricing"],
               ["/about", "About Us"],
               ["/contact", "Contact & Support"],
+              ["/shipping-delivery-policy", "Shipping & Delivery Policy"],
             ] as const).map(([to, label]) => (
               <li key={to}>
                 <Link
@@ -189,8 +190,27 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-border px-4 py-5 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} {BRAND}. All rights reserved.
+      <div className="border-t border-border px-4 py-5">
+        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+          <div>
+            © {new Date().getFullYear()} {BRAND}. All rights reserved.
+          </div>
+          <div className="flex flex-wrap items-center gap-4">
+            <Link
+              to="/shipping-delivery-policy"
+              className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
+            >
+              Shipping &amp; Delivery Policy
+            </Link>
+            <span className="text-border">•</span>
+            <Link
+              to="/contact"
+              className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
+            >
+              Contact &amp; Grievance
+            </Link>
+          </div>
+        </div>
       </div>
     </footer>
   );
