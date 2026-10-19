@@ -8,26 +8,26 @@ export const Route = createFileRoute("/how-it-works")({
     meta: [
       {
         title:
-          "How Dropshipping Works in India — Step-by-Step Process | Dropship Boss",
+          "Online Selling Without Inventory: How It Works | Dropship Boss",
       },
       {
         name: "description",
         content:
-          "Discover how our turnkey dropshipping model takes you from store setup to your first customer sale in 7 days. Automated sourcing, catalog import, and express dispatch.",
+          "Learn how to start an online selling business without inventory in India. Our automated product fulfillment platform handles store setup, winning products, and courier delivery.",
       },
       {
         name: "keywords",
         content:
-          "how dropshipping works india, dropshipping process, turnkey store setup, ecommerce fulfillment, winning products sourcing",
+          "online selling without inventory, automated dropshipping India, product fulfillment partners India, how dropshipping works india, start online selling business, online selling business kya hai, ecommerce selling India, Dropship Boss",
       },
       {
         property: "og:title",
-        content: "How Dropshipping Works — Dropship Boss Automation Process",
+        content: "Online Selling Without Inventory: How It Works — Dropship Boss",
       },
       {
         property: "og:description",
         content:
-          "Launch a zero-inventory dropshipping store in 4 simple steps: setup, catalog import, automated dispatch, and scaling support.",
+          "Launch an ecommerce business without inventory. Learn our 4-step automated fulfillment process from turnkey store setup to pan-India delivery.",
       },
     ],
   }),

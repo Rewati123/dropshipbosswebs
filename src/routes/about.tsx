@@ -8,23 +8,23 @@ export const Route = createFileRoute("/about")({
     meta: [
       {
         title:
-          "About Dropship Boss — Leading Dropshipping & E-Commerce Partner in India",
+          "About Dropship Boss: Trusted Indian Ecommerce Seller Platform",
       },
       {
         name: "description",
         content:
-          "Learn how Dropship Boss empowers 1,000+ Indian entrepreneurs to build profitable, automated dropshipping businesses with zero upfront inventory.",
+          "Dropship Boss is a premier ecommerce enablement and product fulfillment partner in India, empowering sellers to start and scale online businesses without inventory.",
       },
       {
         name: "keywords",
         content:
-          "about dropship boss, dropshipping company india, ecommerce automation agency, dropshipping mentorship, online business setup india",
+          "trusted Indian ecommerce seller platforms, product fulfillment partners India, indian product fulfillment partners, best ecommerce seller platform India, about dropship boss, dropshipping suppliers India, Dropship Boss",
       },
-      { property: "og:title", content: "About Dropship Boss — Turnkey Dropshipping Partner" },
+      { property: "og:title", content: "About Dropship Boss — Trusted Indian Ecommerce Seller Platform" },
       {
         property: "og:description",
         content:
-          "Over 1,000+ online stores launched. Our mission is to make e-commerce entrepreneurship accessible, scalable, and risk-free for everyone in India.",
+          "Over 1,200+ online stores enabled across India. Our mission is to make online selling without inventory accessible, scalable, and profitable.",
       },
     ],
   }),

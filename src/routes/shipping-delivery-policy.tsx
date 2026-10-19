@@ -41,7 +41,7 @@ export const Route = createFileRoute("/shipping-delivery-policy")({
       {
         name: "keywords",
         content:
-          "dropshipping shipping policy india, dropship boss delivery timelines, ecommerce fulfillment india, cod verification, rto management, pan india delivery",
+          "product fulfillment partners India, indian product fulfillment partners, online selling without inventory, automated dropshipping India, dropshipping shipping policy india, dropship boss delivery timelines, ecommerce fulfillment india, cod verification, rto management, pan india delivery",
       },
       {
         property: "og:title",

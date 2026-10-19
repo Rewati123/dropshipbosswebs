@@ -205,27 +205,27 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Dropship Boss — #1 Dropshipping & E-Commerce Automation Partner in India | Zero Inventory",
+          "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
       },
       {
         name: "description",
         content:
-          "Launch your automated dropshipping business in India with zero inventory. Turnkey store setup for Shopify, Amazon, Flipkart & Meesho with vetted Indian suppliers, winning product catalogs, and automated order fulfillment.",
+          "Dropship Boss is an ecommerce enablement and product fulfillment platform helping you sell products and grow your online business without inventory.",
       },
       {
         name: "keywords",
         content:
-          "dropshipping in india, automated dropshipping, ecommerce dropshipping, zero inventory business, shopify dropshipping india, amazon dropshipping supplier, meesho reselling, winning products catalog, b2b dropship india, order fulfillment, rto reduction",
+          "dropshipping in India, ecommerce selling platform India, dropshipping suppliers India, product fulfillment partners India, online selling without inventory, automated dropshipping India, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, start online selling business, online selling business kya hai, B2B dropshipping India, Indian ecommerce seller platform, winning products catalog, trending products for ecommerce selling, best products for dropshipping in India, best sourced products in india, top sourced products, trending sourced products, winning products for ecommerce selling, indian product fulfillment partners, ecommerce business, best product fulfillment partners india, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, Dropship Boss",
       },
       {
         property: "og:title",
         content:
-          "Dropship Boss — #1 Dropshipping & E-Commerce Automation Partner in India",
+          "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
       },
       {
         property: "og:description",
         content:
-          "Complete turnkey dropshipping setup for Amazon, Meesho, Flipkart & Shopify with verified product catalogs, automated fulfillment, and lifetime mentorship.",
+          "Sell products and scale your online business without inventory. Turnkey store setup for Shopify, Amazon, Flipkart & Meesho with verified product catalogs and automated fulfillment.",
       },
     ],
   }),

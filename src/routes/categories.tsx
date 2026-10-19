@@ -8,23 +8,23 @@ export const Route = createFileRoute("/categories")({
     meta: [
       {
         title:
-          "High-Margin Dropshipping Product Categories in India | Dropship Boss",
+          "Winning Products Catalog & Sourced Products | Dropship Boss",
       },
       {
         name: "description",
         content:
-          "Explore trending, high-margin dropshipping categories in India: Ladies Bags & Handbags, Backpacks & Travel Bags, Gadgets & Electronics, Home & Kitchen, Beauty, and Kids with pre-vetted wholesale suppliers.",
+          "Explore trending sourced products and winning products for ecommerce selling in India. High-margin wholesale catalog for Amazon, Flipkart, Meesho & Shopify with verified fulfillment.",
       },
       {
         name: "keywords",
         content:
-          "dropshipping categories, winning products catalog india, dropship ladies bags, dropship backpacks, dropship gadgets electronics, high margin dropshipping products",
+          "winning products catalog, trending products for ecommerce selling, best products for dropshipping in India, best sourced products, sourced products, trending sourced products, best sourced products in india, top sourced products, winning products for ecommerce selling, dropshipping suppliers India, B2B dropshipping India, Dropship Boss",
       },
-      { property: "og:title", content: "Dropshipping Product Categories — Dropship Boss" },
+      { property: "og:title", content: "Winning Products Catalog & Sourced Products — Dropship Boss" },
       {
         property: "og:description",
         content:
-          "Curated winning product catalog across 6 high-volume consumer categories with pre-negotiated wholesale margins and verified Indian suppliers.",
+          "Curated winning product catalog across 6 high-volume consumer categories with pre-negotiated wholesale margins and verified Indian product fulfillment partners.",
       },
     ],
   }),

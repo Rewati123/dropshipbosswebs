@@ -23,23 +23,23 @@ export const Route = createFileRoute("/pricing")({
     meta: [
       {
         title:
-          "Dropshipping Setup Pricing & Packages in India | Dropship Boss",
+          "Start Online Selling Business — Plans & Pricing | Dropship Boss",
       },
       {
         name: "description",
         content:
-          "Explore SeekhoBecho-structured transparent pricing for turnkey dropshipping setup in India. Starter, Growth Automation, and Scale Pro VIP packages with zero inventory, verified suppliers, and lifetime mentorship.",
+          "Transparent, one-time investment packages for turnkey ecommerce selling and dropshipping in India. Starter, Growth Automation, and Scale Pro VIP packages with zero inventory.",
       },
       {
         name: "keywords",
         content:
-          "dropshipping pricing india, dropship setup cost, turnkey store packages, ecommerce automation cost, shopify setup price india, seekhobecho pricing, dropshipguru plans",
+          "start online selling business, best ecommerce seller platform India, product fulfillment partners india, B2B dropshipping India, dropshipping pricing india, turnkey store packages, online selling without inventory, Dropship Boss",
       },
-      { property: "og:title", content: "Dropshipping Pricing & Packages — Dropship Boss" },
+      { property: "og:title", content: "Start Online Selling Business — Dropship Boss Pricing & Plans" },
       {
         property: "og:description",
         content:
-          "Predictable, one-time pricing for complete dropshipping store setup in India with verified product catalogs and automated dispatch.",
+          "Predictable, one-time pricing for complete ecommerce seller platform setup in India with verified product catalogs and automated fulfillment.",
       },
     ],
   }),
