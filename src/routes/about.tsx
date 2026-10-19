@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "keywords",
         content:
-          "trusted Indian ecommerce seller platforms, product fulfillment partners India, indian product fulfillment partners, best ecommerce seller platform India, about dropship boss, dropshipping suppliers India, Dropship Boss",
+          "trusted Indian ecommerce seller platforms, best ecommerce seller platform India, product fulfillment partners India, product fulfillment partner India, indian product fulfillment partners, best product fulfillment partners india, india product fulfillment partners, ecommerce selling India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, dropshipping in India, dropshipping suppliers India, automated dropshipping India, B2B dropshipping India, about dropship boss, Dropship Boss",
       },
       { property: "og:title", content: "About Dropship Boss — Trusted Indian Ecommerce Seller Platform" },
       {
