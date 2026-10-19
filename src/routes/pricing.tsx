@@ -16,6 +16,7 @@ import {
   Zap,
 } from "lucide-react";
 import { PageHero, Section, SectionTitle } from "@/components/PageShell";
+import { PricingSlider } from "@/components/PricingSlider";
 import { CONTACT_INFO, faqs, plans } from "@/lib/site-data";
 
 export const Route = createFileRoute("/pricing")({
@@ -28,7 +29,7 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Transparent, one-time investment packages for turnkey ecommerce selling and dropshipping in India. Starter, Growth Automation, and Scale Pro VIP packages with zero inventory.",
+          "Transparent subscription packages for turnkey ecommerce selling and dropshipping in India. Silver, Gold, Titanium, Platinum, Platinum Plus, Elite, and Diamond plans with zero inventory.",
       },
       {
         name: "keywords",
@@ -39,31 +40,24 @@ export const Route = createFileRoute("/pricing")({
       {
         property: "og:description",
         content:
-          "Predictable, one-time pricing for complete ecommerce seller platform setup in India with verified product catalogs and automated fulfillment.",
+          "Predictable, transparent pricing for complete ecommerce seller platform setup in India with verified product catalogs and automated fulfillment.",
       },
     ],
   }),
   component: Pricing,
 });
 
-const categoryIcons: Record<string, typeof Store> = {
-  "Marketplace & Store Setup": Store,
-  "Product Sourcing & Catalog": Package,
-  "Fulfillment & Logistics": Truck,
-  "Training & Mentorship": Headphones,
-};
-
 function Pricing() {
   return (
     <>
       <PageHero
-        eyebrow="Transparent Investment • Seekho & Becho Confidently"
+        eyebrow="Transparent Investment • All 7 Plans"
         title={
           <>
-            Predictable Pricing, <span className="gradient-text">Zero Monthly Commissions</span>
+            Predictable Pricing, <span className="gradient-text">Zero Hidden Commissions</span>
           </>
         }
-        subtitle="One-time turnkey setup investment with lifetime catalog access and 1-on-1 mentorship. Compare our structured packages below and launch your automated e-commerce store in 72 hours."
+        subtitle="One-time & monthly setup options with verified catalog access and 1-on-1 mentorship. Slide through our complete tiers below and launch your automated e-commerce store in 72 hours."
       />
 
       {/* Trust Highlights Strip (DropshipGuru-inspired) */}
@@ -83,149 +77,22 @@ function Pricing() {
           </div>
           <div className="flex items-center gap-2 text-muted-foreground">
             <Headphones className="h-4 w-4 text-primary" />
-            <span>Lifetime Dedicated Support</span>
+            <span>Dedicated Human Support</span>
           </div>
         </div>
       </div>
 
-      {/* Main Pricing Cards (SeekhoBecho-Structured Hierarchy) */}
+      {/* Main Pricing Slider */}
       <Section>
-        <div className="grid gap-8 lg:grid-cols-3 items-stretch">
-          {plans.map((p) => {
-            const isFeatured = p.highlight;
-            return (
-              <div
-                key={p.id}
-                className={`surface-card relative flex flex-col justify-between overflow-hidden rounded-3xl p-6 sm:p-8 transition-all duration-300 ${
-                  isFeatured
-                    ? "glow-ring border-primary/70 bg-gradient-to-b from-card via-card to-primary/5 lg:-translate-y-3 z-10"
-                    : "border-border/80 bg-card/60"
-                }`}
-              >
-                {/* Ribbon Badge */}
-                {p.badge && (
-                  <div className="mb-4 flex items-center justify-between">
-                    <span
-                      className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-bold uppercase tracking-wider ${
-                        isFeatured
-                          ? "bg-primary text-primary-foreground shadow-lg shadow-primary/30"
-                          : "border border-primary/40 bg-primary/10 text-primary"
-                      }`}
-                    >
-                      {p.badge}
-                    </span>
-                    <span className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-bold text-emerald-400">
-                      {p.discount}
-                    </span>
-                  </div>
-                )}
-
-                <div>
-                  {/* Plan Name & Purpose */}
-                  <h2 className="text-2xl font-bold tracking-tight">{p.name}</h2>
-                  <p className="mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed min-h-[3rem]">
-                    {p.subtitle}
-                  </p>
-
-                  {/* Price Box with Strikethrough & Highlight */}
-                  <div className="mt-5 rounded-2xl border border-border/80 bg-background/60 p-4 sm:p-5">
-                    <div className="flex items-baseline gap-2.5">
-                      <span className="text-xs font-medium uppercase text-muted-foreground">
-                        Regular Price:
-                      </span>
-                      <span className="text-sm font-semibold line-through text-muted-foreground/80 decoration-destructive decoration-2">
-                        {p.originalPrice}
-                      </span>
-                      <span className="ml-auto rounded-full bg-primary/15 px-2 py-0.5 text-[11px] font-bold text-primary">
-                        {p.discount}
-                      </span>
-                    </div>
-
-                    <div className="mt-2 flex items-baseline gap-1">
-                      <span className="font-display text-4xl sm:text-5xl font-black gradient-text tracking-tight">
-                        {p.price}
-                      </span>
-                      <span className="text-xs text-muted-foreground font-medium ml-1">
-                        / one-time
-                      </span>
-                    </div>
-
-                    <p className="mt-2 text-[11px] sm:text-xs text-muted-foreground font-medium flex items-center gap-1.5">
-                      <BadgeCheck className="h-3.5 w-3.5 text-primary shrink-0" />
-                      {p.note}
-                    </p>
-                  </div>
-
-                  {/* Primary CTA Button */}
-                  <div className="mt-6">
-                    <Link
-                      to="/contact"
-                      className={`group flex w-full items-center justify-center gap-2 rounded-xl py-3.5 px-4 text-sm font-bold transition-all duration-300 hover:scale-[1.02] cursor-pointer shadow-lg ${
-                        isFeatured
-                          ? "bg-primary text-primary-foreground hover:bg-primary/95 shadow-primary/25"
-                          : "border border-border bg-card hover:border-primary hover:text-primary"
-                      }`}
-                    >
-                      <span>{p.ctaText}</span>
-                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-
-                    <p className="mt-2 text-center text-[11px] text-muted-foreground">
-                      ⚡ 72-Hour SLA Guaranteed Store Launch
-                    </p>
-                  </div>
-
-                  {/* SeekhoBecho-Style Categorized Feature Breakdown */}
-                  <div className="mt-8 space-y-5 border-t border-border/60 pt-6">
-                    {p.groupedFeatures.map((group) => {
-                      const IconComponent =
-                        categoryIcons[group.category] || Sparkles;
-                      return (
-                        <div key={group.category} className="space-y-2">
-                          <h3 className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-foreground">
-                            <span className="flex h-5 w-5 items-center justify-center rounded-md bg-primary/15 text-primary">
-                              <IconComponent className="h-3 w-3" />
-                            </span>
-                            {group.category}
-                          </h3>
-                          <ul className="space-y-2 pl-1">
-                            {group.items.map((feat, i) => (
-                              <li
-                                key={i}
-                                className="flex items-start gap-2.5 text-xs sm:text-sm text-muted-foreground"
-                              >
-                                <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
-                                <span className="leading-snug">{feat}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Footer of Card */}
-                <div className="mt-8 pt-4 border-t border-border/40 text-center">
-                  <a
-                    href={`https://wa.me/919582617055?text=Hello%20Dropship%20Boss%2C%20I%20am%20interested%20in%20the%20${encodeURIComponent(
-                      p.name
-                    )}%20plan`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary/90 hover:text-primary transition-colors cursor-pointer"
-                  >
-                    <MessageSquare className="h-3.5 w-3.5" />
-                    Chat on WhatsApp about this plan
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <SectionTitle
+          eyebrow="All 7 Seller Tiers • Transparent Subscriptions"
+          title="Choose Your Automated Selling Package"
+          text="Slide horizontally to browse our social reselling plans, multi-marketplace seller packages, and complete turnkey D2C web stores."
+        />
+        <PricingSlider />
 
         {/* Custom Enterprise or Consultation Callout */}
-        <div className="mt-12 surface-card flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 border border-primary/30 bg-gradient-to-r from-card via-card to-primary/5">
+        <div className="mt-14 surface-card flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 border border-primary/30 bg-gradient-to-r from-card via-card to-primary/5">
           <div className="space-y-1 text-center md:text-left">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-primary">
               <Sparkles className="h-3.5 w-3.5" /> Need Custom Channel Integration?
@@ -267,92 +134,101 @@ function Pricing() {
             <thead className="border-b border-border bg-background/50 text-xs uppercase tracking-wider text-muted-foreground">
               <tr>
                 <th className="py-4 px-6 font-semibold">Features & Deliverables</th>
-                <th className="py-4 px-4 text-center font-semibold">Starter (₹2,999)</th>
+                <th className="py-4 px-4 text-center font-semibold">Silver (₹590/yr)</th>
+                <th className="py-4 px-4 text-center font-semibold">Gold (₹1,590/yr)</th>
                 <th className="py-4 px-4 text-center font-semibold text-primary bg-primary/5">
-                  Growth (₹7,499) ★
+                  Platinum (₹5,000/yr) ★
                 </th>
-                <th className="py-4 px-4 text-center font-semibold">Scale Pro (₹14,999)</th>
+                <th className="py-4 px-4 text-center font-semibold">Diamond (₹15,000/yr)</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-border/60">
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">Channels Included</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">1 (Amazon or Meesho)</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Selling Channels</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">WhatsApp Reselling</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">WhatsApp + Instagram + FB</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  3 (Shopify + Amazon + Meesho)
+                  Amazon.in + Flipkart + Meesho
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  All 5 + Custom D2C Store
+                  Custom Branded D2C Website
                 </td>
               </tr>
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">Turnkey Store Design</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">Standard Layout</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Products Added Monthly</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">20 Winning Products</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">40 Winning Products</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  Done-For-You Custom Theme
+                  40 Products on Panel
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  Bespoke High-Converting Brand
+                  40 Pre-Loaded Products / Mo
                 </td>
               </tr>
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">Winning Catalog Sourced</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">50 Products</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Zero-Inventory Model</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">100% Zero Stock</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">100% Zero Stock</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  500+ Curated Products
+                  100% Zero Stock
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  Full 40,000+ Wholesale Catalog
+                  100% Zero Stock
                 </td>
               </tr>
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">Order Sync & Automation</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">Semi-Automated Guide</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Fulfillment & Shipping</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Managed by our team</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Pan-India express dispatch</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  100% Automated Cloud Sync
+                  QC check & express courier
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  VIP Priority Pipeline + QC
+                  Automated packing + RTO control
                 </td>
               </tr>
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">RTO Reduction Toolkit</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">Checklist & Guide</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Store / Account Setup</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Direct Social Catalog</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Social Commerce Hub</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  Automated WhatsApp/SMS IVR
+                  Seller Central + Ungating
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  AI Risk Engine (&lt; 4.8% Returns)
+                  Custom Domain Storefront
                 </td>
               </tr>
               <tr>
-                <td className="py-3.5 px-6 font-medium text-foreground">Ad Strategy & Scaling</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">—</td>
+                <td className="py-3.5 px-6 font-medium text-foreground">Payment Gateway / COD</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Direct UPI / Cash</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Direct UPI / Cash</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  High-ROAS Meta & Google Playbook
+                  Marketplace Payouts
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  1-on-1 Managed Ad Optimization
+                  Razorpay, PhonePe & COD
                 </td>
               </tr>
               <tr>
                 <td className="py-3.5 px-6 font-medium text-foreground">Support & Mentorship</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">Email Support (90 Days)</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">WhatsApp Community</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Community & Fast-Track Chat</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
-                  Weekly 1-on-1 Video + WhatsApp
+                  Listing & SEO Guidance
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  Dedicated Personal Account Manager
+                  1-on-1 Mentor + Ads Playbook
                 </td>
               </tr>
               <tr>
                 <td className="py-3.5 px-6 font-medium text-foreground">Launch SLA</td>
-                <td className="py-3.5 px-4 text-center text-muted-foreground">5 Days</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Instant Access</td>
+                <td className="py-3.5 px-4 text-center text-muted-foreground">Instant Access</td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold bg-primary/5">
                   72 Hours Guaranteed
                 </td>
                 <td className="py-3.5 px-4 text-center text-foreground font-semibold">
-                  48-72 Hours Priority SLA
+                  72 Hours Full Turnkey
                 </td>
               </tr>
             </tbody>

@@ -22,6 +22,7 @@ import {
 } from "lucide-react";
 import { Section, SectionTitle } from "@/components/PageShell";
 import { HomeHeroSlider } from "@/components/HomeHeroSlider";
+import { PricingSlider } from "@/components/PricingSlider";
 import {
   Accordion,
   AccordionContent,
@@ -634,98 +635,14 @@ function Home() {
         </div>
       </Section>
 
-      {/* SeekhoBecho-Structured Pricing Cards Section */}
+      {/* All 7 Subscription & Enablement Plans in Interactive Slider */}
       <Section className="pt-0">
         <SectionTitle
-          eyebrow="Transparent Packages • Seekho & Becho"
+          eyebrow="Flexible Membership & Seller Packages"
           title="Predictable Pricing, Zero Hidden Commissions"
-          text="One-time setup investment, lifetime catalog access and ongoing mentorship. Launch in 72 hours."
+          text="Explore all 7 setup and subscription tiers. From WhatsApp social reselling to full marketplace and custom D2C stores with automated fulfillment."
         />
-        <div className="grid gap-6 md:grid-cols-3 items-stretch">
-          {plans.map((p) => {
-            const isFeatured = p.highlight;
-            return (
-              <div
-                key={p.id}
-                className={`surface-card relative flex flex-col justify-between overflow-hidden rounded-3xl p-6 sm:p-7 transition-all duration-300 ${
-                  isFeatured
-                    ? "glow-ring border-primary/70 bg-gradient-to-b from-card via-card to-primary/5 md:-translate-y-2"
-                    : "border-border/80"
-                }`}
-              >
-                <div>
-                  {/* Top Badge & Discount Pill */}
-                  <div className="mb-3 flex items-center justify-between">
-                    <span
-                      className={`inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider ${
-                        isFeatured
-                          ? "bg-primary text-primary-foreground shadow-md"
-                          : "border border-primary/40 bg-primary/10 text-primary"
-                      }`}
-                    >
-                      {p.badge || p.name}
-                    </span>
-                    <span className="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-bold text-emerald-400">
-                      {p.discount}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl font-bold">{p.name}</h3>
-                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">
-                    {p.subtitle}
-                  </p>
-
-                  {/* SeekhoBecho Price Anchoring */}
-                  <div className="mt-4 rounded-xl border border-border/80 bg-background/50 p-3.5">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xs text-muted-foreground">Original:</span>
-                      <span className="text-xs line-through text-muted-foreground decoration-destructive decoration-2">
-                        {p.originalPrice}
-                      </span>
-                      <span className="ml-auto text-[11px] font-bold text-primary">
-                        {p.discount}
-                      </span>
-                    </div>
-                    <div className="mt-1 flex items-baseline gap-1">
-                      <span className="text-3xl font-black gradient-text">
-                        {p.price}
-                      </span>
-                      <span className="text-[11px] text-muted-foreground">/ one-time</span>
-                    </div>
-                    <p className="mt-1 text-[11px] text-muted-foreground flex items-center gap-1">
-                      <BadgeCheck className="h-3 w-3 text-primary shrink-0" />
-                      {p.note}
-                    </p>
-                  </div>
-
-                  {/* Structured Deliverables */}
-                  <ul className="mt-5 space-y-2.5 text-xs text-muted-foreground">
-                    {p.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2">
-                        <Check className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary" />
-                        <span className="leading-snug">{f}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-border/60">
-                  <Link
-                    to="/pricing"
-                    className={`flex w-full items-center justify-center gap-2 rounded-xl py-3 px-4 text-xs font-bold transition-all duration-300 hover:scale-[1.02] cursor-pointer ${
-                      isFeatured
-                        ? "bg-primary text-primary-foreground shadow-md shadow-primary/20"
-                        : "border border-border hover:border-primary hover:text-primary"
-                    }`}
-                  >
-                    <span>View Plan Details & Setup</span>
-                    <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <PricingSlider />
       </Section>
 
       {/* Seller Tips & Knowledge */}
