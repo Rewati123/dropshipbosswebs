@@ -16,6 +16,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { SiteLoader } from "@/components/SiteLoader";
 import { Toaster } from "@/components/ui/sonner";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { faqs, SOCIAL_LINKS } from "@/lib/site-data";
 
 function NotFoundComponent() {
   return (
@@ -153,12 +154,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               "@type": "Organization",
               "@id": "https://dropshipboss.in/#organization",
               name: "Dropship Boss",
+              alternateName: "DropshipBoss India",
               url: "https://dropshipboss.in",
               logo: "https://dropshipboss.in/dropship-boss-logo.png",
               description:
-                "Leading turnkey dropshipping and e-commerce automation partner in India.",
+                "India's premier e-commerce enablement, product fulfillment partner and zero-inventory dropshipping platform.",
               email: "support@dropshipboss.in",
               telephone: "+91-9582617055",
+              sameAs: [
+                SOCIAL_LINKS.instagram,
+                SOCIAL_LINKS.facebook,
+                SOCIAL_LINKS.youtube,
+              ],
               address: {
                 "@type": "PostalAddress",
                 streetAddress:
@@ -168,6 +175,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
                 postalCode: "121003",
                 addressCountry: "IN",
               },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: "+91-9582617055",
+                contactType: "customer support",
+                areaServed: "IN",
+                availableLanguage: ["Hindi", "English"],
+              },
             },
             {
               "@type": "WebSite",
@@ -175,21 +189,34 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: "https://dropshipboss.in",
               name: "Dropship Boss",
               description:
-                "Automated Dropshipping and E-Commerce Solutions in India",
+                "Start your online selling business with India's trusted ecommerce seller platform and product fulfillment partner.",
               publisher: {
                 "@id": "https://dropshipboss.in/#organization",
               },
             },
             {
               "@type": "Service",
-              name: "E-Commerce Dropshipping Business Setup",
-              serviceType: "Dropshipping Automation & Sourcing",
+              "@id": "https://dropshipboss.in/#service",
+              name: "E-Commerce Dropshipping Business Setup & Product Fulfillment",
+              serviceType: "Dropshipping Automation, Product Sourcing & Marketplace Enablement",
               provider: {
                 "@id": "https://dropshipboss.in/#organization",
               },
               areaServed: "India",
               description:
-                "Turnkey dropshipping store setup, catalog research, verified supplier sourcing, order fulfillment, and seller mentorship.",
+                "Turnkey dropshipping store setup, catalog research, verified supplier sourcing, order fulfillment, and seller mentorship across Amazon, Flipkart, Meesho, and Shopify.",
+            },
+            {
+              "@type": "FAQPage",
+              "@id": "https://dropshipboss.in/#faq",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: f.a,
+                },
+              })),
             },
           ],
         }),

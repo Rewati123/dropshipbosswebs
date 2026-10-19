@@ -23,11 +23,86 @@ import {
 import { Section, SectionTitle } from "@/components/PageShell";
 import { HomeHeroSlider } from "@/components/HomeHeroSlider";
 import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
   categories,
   plans,
   steps,
   testimonials,
+  faqs,
+  CONTACT_INFO,
 } from "@/lib/site-data";
+
+const marketplaces = [
+  {
+    name: "Amazon India (Amazon.in)",
+    eyebrow: "Amazon Ecommerce Selling",
+    badge: "Highest Buyer Intent",
+    description:
+      "Launch on India's premier online marketplace. Complete Seller Central setup, category ungating, Brand Registry, and SEO-optimized A+ product content.",
+    points: [
+      "Seller Central registration & compliance verification",
+      "Winning ASIN research with 35%–55% profit margins",
+      "Automated FBM / Prime order routing & 24h dispatch",
+      "A+ catalog copy with high-conversion bullet points",
+    ],
+    tag: "High Ticket Volume",
+    accent: "border-amber-500/40 hover:border-amber-500/80",
+    badgeStyle: "bg-amber-500/15 text-amber-400 border border-amber-500/30",
+  },
+  {
+    name: "Flipkart Ecommerce Selling",
+    eyebrow: "Flipkart Seller Hub",
+    badge: "50 Crore+ Shoppers",
+    description:
+      "Reach deep into Tier 2, Tier 3, and Tier 4 consumer markets across 19,000+ pin codes with turnkey Flipkart seller onboarding.",
+    points: [
+      "Flipkart Seller Hub setup & brand approval tier",
+      "Bulk catalog listing with SEO keyword attributes",
+      "Big Billion Days festive campaign scaling readiness",
+      "Automated inventory synchronization & courier handoff",
+    ],
+    tag: "Pan-India Penetration",
+    accent: "border-sky-500/40 hover:border-sky-500/80",
+    badgeStyle: "bg-sky-500/15 text-sky-400 border border-sky-500/30",
+  },
+  {
+    name: "Meesho Ecommerce Selling",
+    eyebrow: "Social Commerce & Reselling",
+    badge: "0% Commission Platform",
+    description:
+      "Sell products without paying heavy marketplace commission cuts. The highest-growth platform for budget fashion, kitchenware, and lifestyle items.",
+    points: [
+      "0% platform commission on orders",
+      "Massive viral product sales velocity",
+      "Direct domestic manufacturer fulfillment integration",
+      "Optimized for high-volume, low-cost customer acquisition",
+    ],
+    tag: "Zero Commission",
+    accent: "border-fuchsia-500/40 hover:border-fuchsia-500/80",
+    badgeStyle: "bg-fuchsia-500/15 text-fuchsia-400 border border-fuchsia-500/30",
+  },
+  {
+    name: "Shopify D2C Branded Store",
+    eyebrow: "Independent Brand Ownership",
+    badge: "Maximum Profit Margins",
+    description:
+      "Build an independent digital brand. Retain 100% of your customer data, control product pricing, and build a lasting repeat-order business.",
+    points: [
+      "Bespoke mobile-first fast loading storefront theme",
+      "Integrated Razorpay, PhonePe & automated COD checkout",
+      "Facebook/Instagram Meta Pixel & Google Ads conversion tracking",
+      "Automated WhatsApp COD verification to slash RTO below 12%",
+    ],
+    tag: "Build Your Asset",
+    accent: "border-emerald-500/40 hover:border-emerald-500/80",
+    badgeStyle: "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30",
+  },
+];
 
 const services = [
   {
@@ -291,6 +366,64 @@ function Home() {
         </div>
       </Section>
 
+      {/* Multi-Channel Marketplace Enablement Hub */}
+      <Section className="pt-0">
+        <SectionTitle
+          eyebrow="Omnichannel Seller Enablement"
+          title="Sell Across India's Largest E-Commerce Marketplaces"
+          text="Tap into 350+ Million active shoppers. Dropship Boss provides turnkey seller onboarding, automated catalog synchronization, and hands-free fulfillment across Amazon India, Flipkart, Meesho, and Shopify."
+        />
+        <div className="grid gap-6 md:grid-cols-2">
+          {marketplaces.map((m) => (
+            <div
+              key={m.name}
+              className={`surface-card group relative flex flex-col justify-between overflow-hidden p-7 rounded-3xl border transition-all duration-300 ${m.accent}`}
+            >
+              <div>
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                    {m.eyebrow}
+                  </span>
+                  <span
+                    className={`rounded-full px-3 py-0.5 text-xs font-bold uppercase ${m.badgeStyle}`}
+                  >
+                    {m.badge}
+                  </span>
+                </div>
+                <h3 className="mt-3 text-xl font-bold text-foreground">
+                  {m.name}
+                </h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                  {m.description}
+                </p>
+
+                <ul className="mt-5 space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+                  {m.points.map((pt) => (
+                    <li key={pt} className="flex items-start gap-2.5">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-6 flex items-center justify-between pt-4 border-t border-border/50">
+                <span className="text-xs font-semibold text-primary">
+                  {m.tag}
+                </span>
+                <Link
+                  to="/pricing"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-foreground hover:text-primary transition-colors cursor-pointer"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       {/* Common Problems / Roadblocks */}
       <Section className="pt-0">
         <SectionTitle
@@ -311,12 +444,12 @@ function Home() {
         </div>
       </Section>
 
-      {/* High-Demand Categories */}
+      {/* High-Demand Categories & Sourced Products */}
       <Section className="pt-0">
         <SectionTitle
-          eyebrow="Curated Catalogs"
-          title="High-Demand E-Commerce Dropshipping Categories"
-          text="Access vetted supplier lists, verified profit margins, and 1-click importable catalogs."
+          eyebrow="Winning Products Catalog • Sourced Products in India"
+          title="Best Sourced Products for Dropshipping & E-Commerce Selling"
+          text="Browse trending sourced products across 6 high-demand consumer categories with pre-negotiated wholesale profit margins. Direct factory sourcing from Surat, Delhi NCR, and Mumbai."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {categories.map((c) => (
@@ -359,9 +492,9 @@ function Home() {
       {/* Why Dropship Boss Features */}
       <Section className="pt-0">
         <SectionTitle
-          eyebrow="Why Dropship Boss"
-          title="All-in-One E-Commerce Dropshipping Automation"
-          text="Everything you need to source, launch, and scale under a single roof."
+          eyebrow="Trusted Indian Ecommerce Seller Platform"
+          title="India's Most Reliable Product Fulfillment & Enablement Partner"
+          text="Everything you need to source winning products, launch turnkey stores, and automate fulfillment without holding inventory."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {features.map((f) => (
@@ -612,6 +745,50 @@ function Home() {
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{t.text}</p>
             </article>
           ))}
+        </div>
+      </Section>
+
+      {/* Comprehensive E-Commerce FAQ Section for Google Ranking & Seller Clarity */}
+      <Section className="pt-0">
+        <SectionTitle
+          eyebrow="Frequently Asked Questions • PAA Search Snippets"
+          title="Everything You Need to Know About Online Selling in India"
+          text="Get clear, transparent answers about zero-inventory dropshipping, supplier sourcing, profit calculations, COD verification, and marketplace setup."
+        />
+        <div className="mx-auto max-w-4xl">
+          <Accordion type="single" collapsible className="w-full space-y-3.5">
+            {faqs.map((faq, idx) => (
+              <AccordionItem
+                key={idx}
+                value={`faq-${idx}`}
+                className="surface-card rounded-2xl border border-border/80 px-6 data-[state=open]:border-primary/50 data-[state=open]:glow-ring transition-colors"
+              >
+                <AccordionTrigger className="text-base sm:text-lg font-bold text-foreground hover:no-underline hover:text-primary transition-colors py-4 sm:py-5">
+                  <span className="text-left leading-snug">{faq.q}</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-sm sm:text-base text-muted-foreground leading-relaxed pb-5 border-t border-border/40 pt-3">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+
+          <div className="mt-8 surface-card p-6 rounded-2xl border border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <h4 className="font-bold text-foreground text-base">Still have questions about starting your online store?</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-1">
+                Our Indian e-commerce growth specialists are available to guide you on call or WhatsApp.
+              </p>
+            </div>
+            <a
+              href={CONTACT_INFO.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-500 hover:bg-emerald-600 px-6 py-2.5 text-xs font-bold text-white transition-all duration-300 shadow-md shrink-0 cursor-pointer"
+            >
+              <Phone className="h-3.5 w-3.5" /> Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </Section>
 

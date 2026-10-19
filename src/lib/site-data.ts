@@ -323,24 +323,60 @@ export const steps = [
 
 export const faqs = [
   {
-    q: "Do I need prior e-commerce or dropshipping experience?",
-    a: "No prior experience required. Over 70% of our members start from zero. We provide step-by-step video walkthroughs, turnkey store setup, and ongoing 1-on-1 mentor guidance.",
+    q: "What is Dropship Boss and how does it work as a product fulfillment partner in India?",
+    a: "Dropship Boss is India's premier e-commerce enablement and product fulfillment platform. We empower individuals, entrepreneurs, and existing retailers to start and scale an online selling business without holding inventory or renting warehouses. When a customer places an order on your Shopify store, Amazon, Flipkart, or Meesho, our verified Indian manufacturer and warehouse network automatically quality-checks, packs, and dispatches the parcel directly to your customer's doorstep with live tracking, while your net profit is credited directly to your account.",
   },
   {
-    q: "Is a GST number mandatory to start dropshipping in India?",
-    a: "A GST number is required for selling on Amazon and Flipkart. However, you can start on Meesho or your own Shopify D2C store without a GST initially — our team assists you with GST guidance.",
+    q: "Is prior e-commerce or technical experience required to start?",
+    a: "Not at all. Over 80% of our successful sellers started with zero e-commerce background. Dropship Boss provides turnkey store setup, complete product catalog integration, automated inventory synchronization, and hands-on 1-on-1 mentorship. We handle the complex technical, sourcing, and operational workflows so you can focus on driving traffic and growing your profits.",
   },
   {
-    q: "Do I need to purchase inventory upfront?",
-    a: "Zero upfront stock required. Under our automated dropshipping model, the supplier dispatches orders directly to the customer after a purchase is made, eliminating capital risk.",
+    q: "Do I need to buy inventory or maintain stock upfront?",
+    a: "No. With our zero-inventory business model, you never purchase unsold stock or lock your capital into dead inventory. Our verified Indian suppliers hold tens of thousands of units across trending categories. You only pay the wholesale product cost after your customer places an order and pays for it.",
   },
   {
-    q: "When and how do I receive customer payments?",
-    a: "Marketplace payouts follow standard settlement cycles (typically 7 to 15 days). For your own D2C Shopify store, payment gateway payouts arrive directly in your bank account within 2-3 business days.",
+    q: "How much can an online seller earn with Dropship Boss in India?",
+    a: "Seller earnings depend on product selection, marketing consistency, and order volume. On average, active sellers on our platform achieve net profit margins between 30% and 55% per order, with typical monthly take-home profits ranging from ₹35,000 to ₹2,50,000+. Top-performing sellers scaling winning seasonal products on Meta ads and Amazon frequently exceed ₹5,00,000+ in monthly revenue.",
   },
   {
-    q: "What kind of ongoing support and mentorship is included?",
-    a: "Growth and Scale Pro plans include lifetime mentorship and continuous catalog updates. Starter plans include 90 days of dedicated email support.",
+    q: "Is e-commerce selling and dropshipping profitable in India in 2026?",
+    a: "Yes, e-commerce selling in India is booming with rapid digital adoption, UPI penetration, and massive consumer demand across Tier 2, Tier 3, and Tier 4 cities. Because Dropship Boss eliminates warehouse leases, dead stock risk, and high employee payroll, your operational overhead remains near zero, allowing you to run a highly profitable business from home.",
+  },
+  {
+    q: "How to start an online selling business in India in 6 simple steps?",
+    a: "You can launch your automated e-commerce business in 6 simple steps: (1) Choose your high-demand niche from our vetted winning catalog; (2) Complete your business registration and GST setup with our compliance assistance; (3) Build your turnkey branded storefront on Shopify or onboard your seller accounts on Amazon, Flipkart, and Meesho; (4) Sync verified supplier listings, optimized product images, and high-converting descriptions; (5) Launch targeted ad campaigns and organic social channels using our marketing playbooks; (6) Automate courier dispatch across 19,000+ pin codes and collect your profit payouts.",
+  },
+  {
+    q: "Are e-commerce selling and dropshipping companies legal in India?",
+    a: "Yes, e-commerce selling is 100% legal and recognized by the Government of India. The business model operates under the Consumer Protection (E-Commerce) Rules, 2020, and the Information Technology Act. Dropship Boss assists sellers with proper GST compliance, transparent B2B tax invoicing, and authentic domestic manufacturer sourcing.",
+  },
+  {
+    q: "Online selling business kya hai aur bina inventory ke kaise shuru karein?",
+    a: "Online selling business bina inventory ek modern digital retail model hai, jise dropshipping ya automated fulfillment kaha jata hai. Isme aapko koi dukan ya godown (warehouse) lene ki zaroorat nahi hoti. Dropship Boss aapke liye Amazon, Flipkart, Meesho ya Shopify par turnkey store banata hai, trending aur verified products list karta hai, aur order aane par supplier direct customer ke ghar parcel deliver kar deta hai. Net profit seedha aapke bank account me transfer hota hai.",
+  },
+  {
+    q: "Can I earn 1 lakh per month from e-commerce selling in India?",
+    a: "Yes, earning ₹1,00,000 or more per month from e-commerce selling is very achievable with a consistent strategy. It typically requires selling 8 to 15 orders per day with an average net profit of ₹300 to ₹500 per item. By focusing on validated winning products, optimizing ad spend, and controlling return-to-origin (RTO) rates with our automated systems, our active sellers regularly cross this milestone within 60 to 90 days.",
+  },
+  {
+    q: "Why do 90% of beginner online sellers fail, and how does Dropship Boss protect you?",
+    a: "Most independent sellers fail due to 4 critical traps: picking low-demand products without data, unverified suppliers delivering defective goods, massive Cash on Delivery (COD) return-to-origin (RTO) losses, and wasting budgets on unfocused ads. Dropship Boss solves all four: we provide pre-vetted winning products with 35%+ margins, 100% QC-checked Indian manufacturers, automated OTP-based COD verification to slash RTO below 12%, and 1-on-1 ad optimization mentorship.",
+  },
+  {
+    q: "What is the best platform and app to start selling online in India?",
+    a: "The best e-commerce enablement platform is one that provides end-to-end integration: verified domestic product sourcing, automated order routing, multi-marketplace sync (Amazon, Flipkart, Meesho, Shopify), low courier rates, and live human mentorship. Dropship Boss offers an all-in-one ecosystem designed specifically for the Indian market, backed by domestic warehouses in Delhi NCR, Surat, and Mumbai.",
+  },
+  {
+    q: "What are some trending sourced products and winning catalogs in India?",
+    a: "Top-performing categories with rapid sales velocity and healthy 40% to 65% profit margins include: Ladies Bags & Clutches, Laptop Backpacks & Travel Gear, Viral Consumer Electronics & Smart Gadgets, Home Decor & Kitchen Organizers, Beauty & Ayurvedic Wellness Essentials, and Kids Educational Toys. All items in our catalog are sourced directly from verified Indian factories.",
+  },
+  {
+    q: "Can I sell on Amazon India, Flipkart, and Meesho simultaneously?",
+    a: "Yes! Dropship Boss is built for omnichannel e-commerce selling. You can list your curated catalog across Amazon.in, Flipkart, Meesho, and your dedicated Shopify D2C store at the same time. Our cloud fulfillment engine centralizes order routing and stock levels so you avoid overselling and stockouts.",
+  },
+  {
+    q: "How many e-commerce enablement platforms operate in India and how is Dropship Boss different?",
+    a: "While there are several platforms and directories in India, most either charge high recurring software fees, take heavy commission cuts on your sales, or rely on slow international suppliers. Dropship Boss is different: we provide 100% verified domestic Indian manufacturers, zero sales commission, turnkey 72-hour store launch, and dedicated 1-on-1 human mentorship from real e-commerce specialists.",
   },
 ];
 
