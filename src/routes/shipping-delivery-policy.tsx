@@ -41,7 +41,7 @@ export const Route = createFileRoute("/shipping-delivery-policy")({
       {
         name: "keywords",
         content:
-          "product fulfillment partners India, product fulfillment partner India, indian product fulfillment partners, best product fulfillment partners india, india product fulfillment partners, online selling without inventory, automated dropshipping India, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, ecommerce selling India, start online selling business, online selling business kya hai, dropshipping in India, dropshipping suppliers India, B2B dropshipping India, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, cod verification, rto management, pan india delivery, Dropship Boss",
+          "product fulfillment partners India, product fulfillment partner India, indian product fulfillment partners, best product fulfillment partners india, india product fulfillment partners, online selling without inventory, trusted ecommerce seller platform, best ecommerce seller platform India, ecommerce selling India, start online selling business, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, cod verification, rto management, pan india delivery, Dropship Boss, B2B product fulfillment",
       },
       {
         property: "og:title",
@@ -120,7 +120,7 @@ function ShippingDeliveryPolicy() {
     },
     {
       q: "Do you ship internationally outside India?",
-      a: "Currently, our automated zero-inventory dropshipping portal is optimized for pan-India domestic fulfillment across all 28 states and 8 union territories. Bulk international wholesale export orders are supported via custom freight agreements on a case-by-case basis through our support desk.",
+      a: "Currently, our automated zero-inventory fulfillment portal is optimized for pan-India domestic fulfillment across all 28 states and 8 union territories. Bulk international wholesale export orders are supported via custom freight agreements on a case-by-case basis through our support desk.",
     },
   ];
 
@@ -217,7 +217,7 @@ function ShippingDeliveryPolicy() {
               <div className="mt-4 text-xs sm:text-sm text-muted-foreground leading-relaxed space-y-3">
                 <p>
                   This Shipping and Delivery Policy (DB-SDP-2026) governs all physical goods, bulk wholesale
-                  supplies, product samples, and direct customer dropshipping orders dispatched by or on behalf of{" "}
+                  supplies, product samples, and direct customer fulfillment orders dispatched by or on behalf of{" "}
                   <strong className="text-foreground">{BRAND}</strong> (operating through our registered office in
                   Faridabad, Haryana, India).
                 </p>

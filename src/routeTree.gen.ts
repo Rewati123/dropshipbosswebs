@@ -15,7 +15,10 @@ import { Route as CategoriesRouteImport } from './routes/categories'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as PricingRouteImport } from './routes/pricing'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
+import { Route as RefundAndCancellationPolicyRouteImport } from './routes/refund-and-cancellation-policy'
 import { Route as ShippingDeliveryPolicyRouteImport } from './routes/shipping-delivery-policy'
+import { Route as TermsAndConditionsRouteImport } from './routes/terms-and-conditions'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -47,9 +50,25 @@ const PricingRoute = PricingRouteImport.update({
   path: '/pricing',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RefundAndCancellationPolicyRoute =
+  RefundAndCancellationPolicyRouteImport.update({
+    id: '/refund-and-cancellation-policy',
+    path: '/refund-and-cancellation-policy',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const ShippingDeliveryPolicyRoute = ShippingDeliveryPolicyRouteImport.update({
   id: '/shipping-delivery-policy',
   path: '/shipping-delivery-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsAndConditionsRoute = TermsAndConditionsRouteImport.update({
+  id: '/terms-and-conditions',
+  path: '/terms-and-conditions',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -60,7 +79,10 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-and-cancellation-policy': typeof RefundAndCancellationPolicyRoute
   '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -69,7 +91,10 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-and-cancellation-policy': typeof RefundAndCancellationPolicyRoute
   '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -79,7 +104,10 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/how-it-works': typeof HowItWorksRoute
   '/pricing': typeof PricingRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
+  '/refund-and-cancellation-policy': typeof RefundAndCancellationPolicyRoute
   '/shipping-delivery-policy': typeof ShippingDeliveryPolicyRoute
+  '/terms-and-conditions': typeof TermsAndConditionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -90,7 +118,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/how-it-works'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-and-cancellation-policy'
     | '/shipping-delivery-policy'
+    | '/terms-and-conditions'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -99,7 +130,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/how-it-works'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-and-cancellation-policy'
     | '/shipping-delivery-policy'
+    | '/terms-and-conditions'
   id:
     | '__root__'
     | '/'
@@ -108,7 +142,10 @@ export interface FileRouteTypes {
     | '/contact'
     | '/how-it-works'
     | '/pricing'
+    | '/privacy-policy'
+    | '/refund-and-cancellation-policy'
     | '/shipping-delivery-policy'
+    | '/terms-and-conditions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -118,7 +155,10 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   HowItWorksRoute: typeof HowItWorksRoute
   PricingRoute: typeof PricingRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
+  RefundAndCancellationPolicyRoute: typeof RefundAndCancellationPolicyRoute
   ShippingDeliveryPolicyRoute: typeof ShippingDeliveryPolicyRoute
+  TermsAndConditionsRoute: typeof TermsAndConditionsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -165,11 +205,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PricingRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/refund-and-cancellation-policy': {
+      id: '/refund-and-cancellation-policy'
+      path: '/refund-and-cancellation-policy'
+      fullPath: '/refund-and-cancellation-policy'
+      preLoaderRoute: typeof RefundAndCancellationPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/shipping-delivery-policy': {
       id: '/shipping-delivery-policy'
       path: '/shipping-delivery-policy'
       fullPath: '/shipping-delivery-policy'
       preLoaderRoute: typeof ShippingDeliveryPolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms-and-conditions': {
+      id: '/terms-and-conditions'
+      path: '/terms-and-conditions'
+      fullPath: '/terms-and-conditions'
+      preLoaderRoute: typeof TermsAndConditionsRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -182,7 +243,10 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   HowItWorksRoute: HowItWorksRoute,
   PricingRoute: PricingRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
+  RefundAndCancellationPolicyRoute: RefundAndCancellationPolicyRoute,
   ShippingDeliveryPolicyRoute: ShippingDeliveryPolicyRoute,
+  TermsAndConditionsRoute: TermsAndConditionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

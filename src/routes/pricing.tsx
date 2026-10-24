@@ -29,12 +29,12 @@ export const Route = createFileRoute("/pricing")({
       {
         name: "description",
         content:
-          "Transparent subscription packages for turnkey ecommerce selling and dropshipping in India. Silver, Gold, Titanium, Platinum, Platinum Plus, Elite, and Diamond plans with zero inventory.",
+          "Transparent subscription packages for turnkey ecommerce selling and product fulfillment in India. Silver, Gold, Titanium, Platinum, Platinum Plus, Elite, and Diamond plans with zero inventory.",
       },
       {
         name: "keywords",
         content:
-          "start online selling business, best ecommerce seller platform India, product fulfillment partners india, product fulfillment partner India, trusted Indian ecommerce seller platforms, B2B dropshipping India, dropshipping pricing india, turnkey store packages, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, indian product fulfillment partners, best product fulfillment partners india, dropshipping suppliers India, automated dropshipping India, Dropship Boss",
+          "start online selling business, best ecommerce seller platform India, product fulfillment partners india, product fulfillment partner India, trusted ecommerce seller platform, turnkey store packages, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, indian product fulfillment partners, best product fulfillment partners india, Dropship Boss, B2B product fulfillment",
       },
       { property: "og:title", content: "Start Online Selling Business — Dropship Boss Pricing & Plans" },
       {
@@ -60,7 +60,7 @@ function Pricing() {
         subtitle="One-time & monthly setup options with verified catalog access and 1-on-1 mentorship. Slide through our complete tiers below and launch your automated e-commerce store in 72 hours."
       />
 
-      {/* Trust Highlights Strip (DropshipGuru-inspired) */}
+      {/* Trust Highlights Strip */}
       <div className="border-y border-border/70 bg-card/40 py-3.5 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-around gap-4 px-4 text-xs font-semibold sm:text-sm">
           <div className="flex items-center gap-2 text-muted-foreground">

@@ -84,17 +84,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
-        title: "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
+        title: "Dropship Boss: Trusted Ecommerce Seller Platform",
       },
       {
         name: "description",
         content:
-          "Dropship Boss is a premier ecommerce enablement and product fulfillment platform helping you sell products and scale your online business without inventory.",
+          "Dropship Boss is an ecommerce enablement and product fulfillment platform helping you sell products and grow your online business without inventory.",
       },
       {
         name: "keywords",
         content:
-          "ecommerce selling India, product fulfillment partner India, product fulfillment partners India, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, Dropship Boss, best sourced products, sourced products, trending products for ecommerce selling, trending sourced products, best sourced products in india, top sourced products, winning products for ecommerce selling, winning products catalog, indian product fulfillment partners, ecommerce business, best product fulfillment partners india, india product fulfillment partners, dropshipping in India, dropshipping suppliers India, automated dropshipping India, B2B dropshipping India, best products for dropshipping in India, Indian ecommerce seller platform",
+          "ecommerce selling India, product fulfillment partner India, trusted ecommerce seller platform, best ecommerce seller platform India, start online selling business, online selling without inventory, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, product fulfillment partners India, trending products for ecommerce selling, best sourced products in India, ecommerce business, Dropship Boss, B2B product fulfillment, Indian ecommerce seller platform",
       },
       { name: "author", content: "Dropship Boss" },
       { name: "robots", content: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" },
@@ -103,7 +103,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:url", content: "https://dropshipboss.in/" },
       {
         property: "og:title",
-        content: "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
+        content: "Dropship Boss: Trusted Ecommerce Seller Platform",
       },
       {
         property: "og:description",
@@ -115,7 +115,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
+        content: "Dropship Boss: Trusted Ecommerce Seller Platform",
       },
       {
         name: "twitter:description",
@@ -158,7 +158,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               url: "https://dropshipboss.in",
               logo: "https://dropshipboss.in/dropship-boss-logo.png",
               description:
-                "India's premier e-commerce enablement, product fulfillment partner and zero-inventory dropshipping platform.",
+                "India's premier e-commerce enablement, product fulfillment partner and zero-inventory selling platform.",
               email: "support@dropshipboss.in",
               telephone: "+91-9582617055",
               sameAs: [
@@ -197,14 +197,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             {
               "@type": "Service",
               "@id": "https://dropshipboss.in/#service",
-              name: "E-Commerce Dropshipping Business Setup & Product Fulfillment",
-              serviceType: "Dropshipping Automation, Product Sourcing & Marketplace Enablement",
+              name: "E-Commerce Seller Setup & Product Fulfillment Services",
+              serviceType: "E-Commerce Enablement, Product Sourcing & Marketplace Fulfillment",
               provider: {
                 "@id": "https://dropshipboss.in/#organization",
               },
               areaServed: "India",
               description:
-                "Turnkey dropshipping store setup, catalog research, verified supplier sourcing, order fulfillment, and seller mentorship across Amazon, Flipkart, Meesho, and Shopify.",
+                "Turnkey online store setup, catalog research, verified supplier sourcing, order fulfillment, and seller mentorship across Amazon, Flipkart, Meesho, and Shopify.",
             },
             {
               "@type": "FAQPage",

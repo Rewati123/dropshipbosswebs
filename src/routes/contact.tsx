@@ -30,12 +30,12 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Book a free 1-on-1 dropshipping consultation. Reach us instantly via WhatsApp at +91 95826 17055 or direct email at support@dropshipboss.in for turnkey store setup and catalog support.",
+          "Book a free 1-on-1 e-commerce and product fulfillment consultation. Reach us instantly via WhatsApp at +91 95826 17055 or direct email at support@dropshipboss.in for turnkey store setup and catalog support.",
       },
       {
         name: "keywords",
         content:
-          "contact dropship boss, dropshipping consultation india, whatsapp dropshipping support, support@dropshipboss.in, dropship support india, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, product fulfillment partners India, product fulfillment partner India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, winning products catalog, trending products for ecommerce selling, dropshipping in India, Dropship Boss",
+          "contact dropship boss, support@dropshipboss.in, trusted ecommerce seller platform, best ecommerce seller platform India, product fulfillment partners India, product fulfillment partner India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, winning products catalog, trending products for ecommerce selling, Dropship Boss, B2B product fulfillment",
       },
       { property: "og:title", content: "Contact Dropship Boss — Free E-Commerce Consultation" },
       {
@@ -68,7 +68,7 @@ function Contact() {
       `*Phone / WhatsApp:* ${form.phone.trim() || "Not provided"}`,
       `*Email:* ${form.email.trim() || "Not provided"}`,
       `*Target Category:* ${form.category}`,
-      `*Inquiry:* ${form.message.trim() || "Interested in launching a dropshipping business with Dropship Boss. Please share store setup & catalog details."}`,
+      `*Inquiry:* ${form.message.trim() || "Interested in launching an online selling business with Dropship Boss. Please share store setup & catalog details."}`,
       `--------------------------------`,
       `Sent via dropshipboss.in/contact`,
     ].join("\n");
@@ -82,7 +82,7 @@ function Contact() {
   const buildEmailBody = () => {
     return `Hello Dropship Boss Support Team,
 
-I would like to request a 1-on-1 dropshipping consultation with your specialist team.
+I would like to request a 1-on-1 e-commerce seller & fulfillment consultation with your specialist team.
 
 Seller Details:
 • Name: ${form.name.trim() || "Prospective Seller"}
@@ -336,7 +336,7 @@ ${form.name.trim() || "Prospective Seller"}`;
                     rows={4}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="e.g. I am looking to start a zero-inventory dropshipping store on Shopify and Amazon. How quickly can we launch?"
+                    placeholder="e.g. I am looking to start an online store without inventory on Shopify and Amazon. How quickly can we launch?"
                     className="input-base resize-none"
                   />
                 </Field>

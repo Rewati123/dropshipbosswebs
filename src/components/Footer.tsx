@@ -26,7 +26,7 @@ export function Footer() {
             </div>
           </div>
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
-            India&apos;s leading zero-inventory dropshipping and e-commerce automation partner.
+            India&apos;s leading zero-inventory product fulfillment and e-commerce enablement partner.
             Turnkey store setup, winning product sourcing, and automated order fulfillment.
           </p>
           <div className="mt-4">
@@ -191,16 +191,37 @@ export function Footer() {
       </div>
 
       <div className="border-t border-border px-4 py-5">
-        <div className="mx-auto max-w-7xl flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
+        <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
           <div>
-            © {new Date().getFullYear()} {BRAND}. All rights reserved.
+            © 2026 {BRAND}. All rights reserved.
           </div>
-          <div className="flex flex-wrap items-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+            <Link
+              to="/terms-and-conditions"
+              className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
+            >
+              Terms &amp; Conditions
+            </Link>
+            <span className="text-border">•</span>
+            <Link
+              to="/privacy-policy"
+              className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-border">•</span>
+            <Link
+              to="/refund-and-cancellation-policy"
+              className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
+            >
+              Refund &amp; Cancellation
+            </Link>
+            <span className="text-border">•</span>
             <Link
               to="/shipping-delivery-policy"
               className="hover:text-primary transition-colors underline decoration-border/80 underline-offset-4"
             >
-              Shipping &amp; Delivery Policy
+              Shipping &amp; Delivery
             </Link>
             <span className="text-border">•</span>
             <Link

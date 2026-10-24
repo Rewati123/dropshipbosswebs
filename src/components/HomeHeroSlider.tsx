@@ -43,14 +43,14 @@ interface SlideData {
 const slides: SlideData[] = [
   {
     id: "turnkey-automation",
-    tag: "India's #1 Automated Dropshipping Ecosystem",
+    tag: "India's #1 Product Fulfillment & Seller Ecosystem",
     tagIcon: Sparkles,
     headlinePrefix: "Launch & Scale Your",
-    headlineHighlight: "Dropshipping Business",
+    headlineHighlight: "Online Selling Business",
     headlineSuffix: "With Zero Inventory",
     description:
-      "Complete turnkey setup for Shopify, Amazon, Meesho & Flipkart. We provide vetted Indian wholesale suppliers, high-margin winning product catalogs, automated order fulfillment, and 1-on-1 mentor guidance.",
-    primaryCtaText: "Explore Dropshipping Plans",
+      "Complete turnkey enablement for Shopify, Amazon, Meesho & Flipkart. We provide vetted Indian product suppliers, high-margin winning product catalogs, automated order fulfillment, and 1-on-1 seller support.",
+    primaryCtaText: "Explore Fulfillment Plans",
     primaryCtaLink: "/pricing",
     secondaryCtaText: "Book Free Consultation",
     secondaryCtaLink: "/contact",
@@ -143,7 +143,7 @@ export function HomeHeroSlider() {
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Background Ambient Glow (DropshipGuru-inspired aesthetic) */}
+      {/* Background Ambient Glow */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <div className="absolute -top-32 left-1/4 h-96 w-96 rounded-full bg-primary/15 blur-[120px]" />
         <div className="absolute top-1/3 -right-20 h-96 w-96 rounded-full bg-primary-glow/10 blur-[130px]" />
@@ -228,10 +228,10 @@ export function HomeHeroSlider() {
             </dl>
           </div>
 
-          {/* Right Visual Stage (DropshipGuru-Inspired Interactive Holo Dashboard & Visuals) */}
+          {/* Right Visual Stage (Interactive Holo Dashboard & Visuals) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             {activeSlide === 0 && (
-              /* Slide 1 Visual: DropshipGuru-style Holographic Live Dashboard Widget */
+              /* Slide 1 Visual: Holographic Live Dashboard Widget */
               <div className="w-full max-w-lg surface-card relative overflow-hidden rounded-3xl border border-primary/40 bg-gradient-to-br from-card via-card/90 to-primary/5 p-6 shadow-2xl shadow-primary/10 animate-in fade-in zoom-in-95 duration-500">
                 {/* Header of widget */}
                 <div className="flex items-center justify-between border-b border-border/70 pb-4">
@@ -569,7 +569,7 @@ export function HomeHeroSlider() {
         </div>
       </div>
 
-      {/* DropshipGuru-Inspired Trust Row Bar */}
+      {/* Trust Row Bar */}
       <div className="border-t border-border/70 bg-card/60 py-4 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-around gap-6 px-4 text-xs font-semibold sm:text-sm">
           <div className="flex items-center gap-2 text-muted-foreground">

@@ -521,7 +521,7 @@ export const faqs = [
     a: "Seller earnings depend on product selection, marketing consistency, and order volume. On average, active sellers on our platform achieve net profit margins between 30% and 55% per order, with typical monthly take-home profits ranging from ₹35,000 to ₹2,50,000+. Top-performing sellers scaling winning seasonal products on Meta ads and Amazon frequently exceed ₹5,00,000+ in monthly revenue.",
   },
   {
-    q: "Is e-commerce selling and dropshipping profitable in India in 2026?",
+    q: "Is e-commerce selling with zero-inventory fulfillment profitable in India in 2026?",
     a: "Yes, e-commerce selling in India is booming with rapid digital adoption, UPI penetration, and massive consumer demand across Tier 2, Tier 3, and Tier 4 cities. Because Dropship Boss eliminates warehouse leases, dead stock risk, and high employee payroll, your operational overhead remains near zero, allowing you to run a highly profitable business from home.",
   },
   {
@@ -529,12 +529,12 @@ export const faqs = [
     a: "You can launch your automated e-commerce business in 6 simple steps: (1) Choose your high-demand niche from our vetted winning catalog; (2) Complete your business registration and GST setup with our compliance assistance; (3) Build your turnkey branded storefront on Shopify or onboard your seller accounts on Amazon, Flipkart, and Meesho; (4) Sync verified supplier listings, optimized product images, and high-converting descriptions; (5) Launch targeted ad campaigns and organic social channels using our marketing playbooks; (6) Automate courier dispatch across 19,000+ pin codes and collect your profit payouts.",
   },
   {
-    q: "Are e-commerce selling and dropshipping companies legal in India?",
+    q: "Are zero-inventory e-commerce selling and product fulfillment platforms legal in India?",
     a: "Yes, e-commerce selling is 100% legal and recognized by the Government of India. The business model operates under the Consumer Protection (E-Commerce) Rules, 2020, and the Information Technology Act. Dropship Boss assists sellers with proper GST compliance, transparent B2B tax invoicing, and authentic domestic manufacturer sourcing.",
   },
   {
     q: "Online selling business kya hai aur bina inventory ke kaise shuru karein?",
-    a: "Online selling business bina inventory ek modern digital retail model hai, jise dropshipping ya automated fulfillment kaha jata hai. Isme aapko koi dukan ya godown (warehouse) lene ki zaroorat nahi hoti. Dropship Boss aapke liye Amazon, Flipkart, Meesho ya Shopify par turnkey store banata hai, trending aur verified products list karta hai, aur order aane par supplier direct customer ke ghar parcel deliver kar deta hai. Net profit seedha aapke bank account me transfer hota hai.",
+    a: "Online selling business bina inventory ek modern digital retail model hai, jise zero-inventory product fulfillment ya automated fulfillment kaha jata hai. Isme aapko koi dukan ya godown (warehouse) lene ki zaroorat nahi hoti. Dropship Boss aapke liye Amazon, Flipkart, Meesho ya Shopify par turnkey store banata hai, trending aur verified products list karta hai, aur order aane par verified domestic supplier direct customer ke ghar parcel deliver kar deta hai. Net profit seedha aapke bank account me transfer hota hai.",
   },
   {
     q: "Can I earn 1 lakh per month from e-commerce selling in India?",

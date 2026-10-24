@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "keywords",
         content:
-          "trusted Indian ecommerce seller platforms, best ecommerce seller platform India, product fulfillment partners India, product fulfillment partner India, indian product fulfillment partners, best product fulfillment partners india, india product fulfillment partners, ecommerce selling India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, dropshipping in India, dropshipping suppliers India, automated dropshipping India, B2B dropshipping India, about dropship boss, Dropship Boss",
+          "trusted ecommerce seller platform, best ecommerce seller platform India, product fulfillment partners India, product fulfillment partner India, indian product fulfillment partners, best product fulfillment partners india, india product fulfillment partners, ecommerce selling India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, about dropship boss, Dropship Boss, B2B product fulfillment",
       },
       { property: "og:title", content: "About Dropship Boss — Trusted Indian Ecommerce Seller Platform" },
       {
@@ -45,7 +45,7 @@ const values = [
   {
     icon: Users,
     title: "Seller Community First",
-    text: "Join our active network of 1,000+ Indian dropshippers sharing real-time winning product insights, supplier trends, and scaling strategies.",
+    text: "Join our active network of 1,000+ Indian online sellers & e-commerce entrepreneurs sharing real-time winning product insights, supplier trends, and scaling strategies.",
   },
 ];
 
@@ -114,7 +114,7 @@ function About() {
       <Section className="pt-0">
         <SectionTitle
           eyebrow="Seller Feedback"
-          title="What Our Dropshipping Community Says"
+          title="What Our Seller Community Says"
           text="Hear from entrepreneurs who launched and scaled their online businesses with Dropship Boss."
         />
         <div className="grid gap-5 sm:grid-cols-2">

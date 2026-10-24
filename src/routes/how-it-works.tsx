@@ -18,7 +18,7 @@ export const Route = createFileRoute("/how-it-works")({
       {
         name: "keywords",
         content:
-          "online selling without inventory, automated dropshipping India, product fulfillment partners India, product fulfillment partner India, how dropshipping works india, start online selling business, online selling business kya hai, ecommerce selling India, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, B2B dropshipping India, dropshipping suppliers India, indian product fulfillment partners, best product fulfillment partners india, Dropship Boss",
+          "online selling without inventory, product fulfillment partners India, product fulfillment partner India, start online selling business, online selling business kya hai, ecommerce selling India, trusted ecommerce seller platform, best ecommerce seller platform India, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, winning products catalog, trending products for ecommerce selling, best sourced products in india, top sourced products, trending sourced products, B2B product fulfillment, indian product fulfillment partners, best product fulfillment partners india, Dropship Boss",
       },
       {
         property: "og:title",

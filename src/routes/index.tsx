@@ -248,7 +248,7 @@ const features = [
   },
 ];
 
-// DropshipGuru-Inspired Turnkey Engine Steps
+// Turnkey Engine Steps
 const engineWorkflow = [
   {
     step: "01",
@@ -281,7 +281,7 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
+          "Dropship Boss: Trusted Ecommerce Seller Platform",
       },
       {
         name: "description",
@@ -291,12 +291,12 @@ export const Route = createFileRoute("/")({
       {
         name: "keywords",
         content:
-          "ecommerce selling India, product fulfillment partner India, product fulfillment partners India, trusted Indian ecommerce seller platforms, best ecommerce seller platform India, start online selling business, online selling without inventory, online selling business kya hai, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, Shopify dropshipping India, Dropship Boss, best sourced products, sourced products, trending products for ecommerce selling, trending sourced products, best sourced products in india, top sourced products, winning products for ecommerce selling, winning products catalog, indian product fulfillment partners, ecommerce business, best product fulfillment partners india, india product fulfillment partners, dropshipping in India, dropshipping suppliers India, automated dropshipping India, B2B dropshipping India, best products for dropshipping in India, Indian ecommerce seller platform",
+          "ecommerce selling India, product fulfillment partner India, trusted ecommerce seller platform, best ecommerce seller platform India, start online selling business, online selling without inventory, Meesho ecommerce selling, Amazon ecommerce selling, Flipkart ecommerce selling, product fulfillment partners India, trending products for ecommerce selling, best sourced products in India, ecommerce business, Dropship Boss, B2B product fulfillment, Indian ecommerce seller platform",
       },
       {
         property: "og:title",
         content:
-          "Dropship Boss: Trusted Indian Ecommerce Seller Platform",
+          "Dropship Boss: Trusted Ecommerce Seller Platform",
       },
       {
         property: "og:description",
@@ -328,11 +328,11 @@ function Home() {
         </div>
       </div>
 
-      {/* DropshipGuru-Inspired Turnkey Automation Ecosystem Section */}
+      {/* Turnkey Automation Ecosystem Section */}
       <Section>
         <SectionTitle
           eyebrow="Turnkey Fulfillment Engine"
-          title="How Our Automated Dropshipping Engine Works"
+          title="How Our Automated Product Fulfillment Engine Works"
           text="Zero inventory stocking, zero manual packing. Our cloud-integrated supplier ecosystem takes care of everything from manufacturing to doorstep delivery."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -449,7 +449,7 @@ function Home() {
       <Section className="pt-0">
         <SectionTitle
           eyebrow="Winning Products Catalog • Sourced Products in India"
-          title="Best Sourced Products for Dropshipping & E-Commerce Selling"
+          title="Best Sourced Products for E-Commerce Selling"
           text="Browse trending sourced products across 6 high-demand consumer categories with pre-negotiated wholesale profit margins. Direct factory sourcing from Surat, Delhi NCR, and Mumbai."
         />
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -463,7 +463,7 @@ function Home() {
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={c.image}
-                  alt={`${c.title} Dropshipping Catalog in India`}
+                  alt={`${c.title} Product Sourcing Catalog in India`}
                   loading="lazy"
                   width={800}
                   height={800}
@@ -537,7 +537,7 @@ function Home() {
         <SectionTitle
           eyebrow="Seller Success Stories"
           title="Real Results From Real Indian E-Commerce Sellers"
-          text="Hear how everyday entrepreneurs launched profitable dropshipping businesses with Dropship Boss."
+          text="Hear how everyday entrepreneurs launched profitable online selling businesses with Dropship Boss."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((t) => (
@@ -565,7 +565,7 @@ function Home() {
       <Section className="pt-0">
         <SectionTitle
           eyebrow="Comprehensive Solutions"
-          title="Complete End-to-End Dropshipping & Scaling Ecosystem"
+          title="Complete End-to-End E-Commerce Enablement & Fulfillment Ecosystem"
           text="From initial storefront setup to multi-channel advertising and automated fulfillment."
         />
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -585,8 +585,8 @@ function Home() {
       <Section className="pt-0">
         <SectionTitle
           eyebrow="Model Comparison"
-          title="Traditional Retail vs. Automated Dropshipping"
-          text="See why modern entrepreneurs are choosing the zero-inventory dropshipping model."
+          title="Traditional Retail vs. Zero-Inventory Fulfillment"
+          text="See why modern entrepreneurs are choosing the zero-inventory product fulfillment model."
         />
         <div className="grid gap-5 md:grid-cols-2">
           <div className="surface-card p-7">
@@ -649,7 +649,7 @@ function Home() {
       <Section className="pt-0">
         <SectionTitle
           eyebrow="Seller Knowledge Base"
-          title="Proven Strategies to Scale Your Dropshipping Business"
+          title="Proven Strategies to Scale Your E-Commerce Business"
           text="Actionable insights from our team of e-commerce and sourcing specialists."
         />
         <div className="grid gap-5 md:grid-cols-3">
@@ -670,7 +670,7 @@ function Home() {
         <SectionTitle
           eyebrow="Frequently Asked Questions • PAA Search Snippets"
           title="Everything You Need to Know About Online Selling in India"
-          text="Get clear, transparent answers about zero-inventory dropshipping, supplier sourcing, profit calculations, COD verification, and marketplace setup."
+          text="Get clear, transparent answers about zero-inventory selling, supplier sourcing, profit calculations, COD verification, and marketplace setup."
         />
         <div className="mx-auto max-w-4xl">
           <Accordion type="single" collapsible className="w-full space-y-3.5">
@@ -716,7 +716,7 @@ function Home() {
             <Sparkles className="h-3.5 w-3.5" /> Ready To Start Earning?
           </span>
           <h2 className="mt-4 text-2xl sm:text-4xl font-bold">
-            Launch Your Dropshipping Business In The Next 72 Hours
+            Launch Your Online Selling Business In The Next 72 Hours
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm sm:text-base text-muted-foreground leading-relaxed">
             Zero inventory risk, verified Indian wholesale suppliers, automated order dispatch,
